@@ -1,5 +1,7 @@
 <template>
-  <h1>Onboarding</h1>
+  <h1 :class="$style.title">
+    Onboarding
+  </h1>
 </template>
 
 <script lang="ts">
@@ -9,3 +11,9 @@ export default defineComponent({
   name: 'OnboardingPage',
 })
 </script>
+
+<style lang="scss" module>
+.title {
+  @include typo-title;
+}
+</style>

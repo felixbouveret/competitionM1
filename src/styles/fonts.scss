@@ -1,0 +1,59 @@
+@font-face {
+  font-family: TrendSensOne;
+  src: url("@/assets/fonts/TrendSensOne.ttf");
+}
+
+@mixin typo-giga-title {
+  font-family: TrendSensOne, Courier, monospace;
+  font-weight: 300;
+  font-size: 120px;
+  line-height: 121px;
+}
+
+@mixin typo-mega-title {
+  font-family: TrendSensOne, Courier, monospace;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 81px;
+}
+
+@mixin typo-big-title {
+  font-family: TrendSensOne, Courier, monospace;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 61px;
+}
+
+@mixin typo-title {
+  font-family: TrendSensOne, Courier, monospace;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+@mixin typo-heading {
+  font-family: TrendSensOne, Courier, monospace;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@mixin typo-callout {
+  font-family: TrendSensOne, Courier, monospace;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+@mixin typo-regular-link {
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+@mixin typo-body {
+  font-size: 16px;
+  line-height: 19px;
+}

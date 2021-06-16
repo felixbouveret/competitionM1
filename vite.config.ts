@@ -13,4 +13,17 @@ export default defineConfig({
       "@": resolve(__dirname, "./src") // map '@' to './src' 
     },
   },
+  css: {
+    modules: {
+      generateScopedName: '[folder]-[local]-[emoji]',
+    },
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import 'src/styles/_modules.scss';
+        `,
+      },
+    },
+  }
+
 })
