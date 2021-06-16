@@ -7,6 +7,8 @@ import { defineComponent } from 'vue'
 import HomeModule from '../modules/Homepage'
 
 export default defineComponent({
+  name: 'HomePage',
+
   components: {
     HomeModule
   }
