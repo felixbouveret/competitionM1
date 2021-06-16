@@ -1,5 +1,5 @@
 <template>
-  <h1>onboarding</h1>
+  <h1>Onboarding</h1>
 </template>
 
 <script lang="ts">
