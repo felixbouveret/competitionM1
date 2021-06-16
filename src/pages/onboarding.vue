@@ -9,7 +9,3 @@ export default defineComponent({
   name: 'OnboardingPage',
 })
 </script>
-
-<style>
-
-</style>

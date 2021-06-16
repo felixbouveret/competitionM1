@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HomeModule from '../modules/Homepage'
+import HomeModule from '../modules/HomePage'
 
 export default defineComponent({
   name: 'HomePage',
@@ -14,7 +14,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style>
-
-</style>

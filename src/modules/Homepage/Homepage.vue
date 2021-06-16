@@ -4,6 +4,9 @@
     :src="Logo"
   >
   <Hero msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-link to="/onboarding">
+    Go to About
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -12,13 +15,14 @@ import { Hero } from './components'
 import Logo from '@/assets/logo.png'
 
 export default defineComponent({
-  name: 'App',
+  name: 'HomePage',
   
   components: {
     Hero,
   },
 
   setup() {
+
     return {
       Logo
     }
