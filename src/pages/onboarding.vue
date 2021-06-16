@@ -1,15 +1,12 @@
 <template>
-  <HomeModule />
+  <h1>onboarding</h1>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HomeModule from '../modules/Homepage'
 
 export default defineComponent({
-  components: {
-    HomeModule
-  }
+
 })
 </script>
 
