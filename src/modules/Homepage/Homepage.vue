@@ -1,5 +1,8 @@
 <template>
-  <img alt="Vue logo" :src="Logo" />
+  <img
+    alt="Vue logo"
+    :src="Logo"
+  >
   <Hero msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
