@@ -4,13 +4,16 @@
     :src="Logo"
   >
   <Hero msg="Hello Vue 3 + TypeScript + Vite" />
+  <button @click="getContent">
+    click
+  </button>
   <router-link to="/onboarding">
     Go to About
   </router-link>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { Hero } from './components'
 import Logo from '@/assets/logo.png'
 
@@ -21,9 +24,17 @@ export default defineComponent({
     Hero,
   },
 
-  setup() {
+  setup($prismic: any) {
+    const data = ref(null)
+
+    const getContent = async () => {
+      // Query the API and assign the response to "response"
+      data.value = await $prismic.client.query('')
+    }
 
     return {
+      getContent,
+      data,
       Logo
     }
   }
