@@ -29,7 +29,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" module>
 a {
   color: #42b983;
 }

@@ -1,4 +1,4 @@
-import { install as installComponents } from './globalComponents.plugin.ts'
+import { install as installComponents } from './globalComponents.plugin'
 
 export const installPlugins = (app: any): void => {
   const plugins = [
