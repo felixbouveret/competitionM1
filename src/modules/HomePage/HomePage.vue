@@ -5,7 +5,7 @@
   >
   <Hero msg="Hello Vue 3 + TypeScript + Vite" />
   <router-link to="/onboarding">
-    Go to About
+    Go to Onboarding
   </router-link>
 </template>
 
