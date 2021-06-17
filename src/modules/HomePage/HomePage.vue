@@ -1,12 +1,14 @@
 <template>
-  <img
-    alt="Vue logo"
-    :src="Logo"
-  >
-  <Hero msg="Hello Vue 3 + TypeScript + Vite" />
-  <router-link to="/onboarding">
-    Go to Onboarding
-  </router-link>
+  <Wrapper>
+    <img
+      alt="Vue logo"
+      :src="Logo"
+    >
+    <Hero msg="Hello Vue 3 + TypeScript + Vite" />
+    <router-link to="/onboarding">
+      Go to Onboarding
+    </router-link>
+  </Wrapper>
 </template>
 
 <script lang="ts">
