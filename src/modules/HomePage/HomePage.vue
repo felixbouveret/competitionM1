@@ -1,10 +1,12 @@
 <template>
 <Section></Section>
+<Sectiondouble>
+</Sectiondouble>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Hero, Section } from './components'
+import { Hero, Section, Sectiondouble } from './components'
 import Logo from '@/assets/logo.png'
 
 export default defineComponent({
@@ -13,6 +15,7 @@ export default defineComponent({
   components: {
     Hero,
     Section,
+    Sectiondouble,
   },
 
   setup() {
