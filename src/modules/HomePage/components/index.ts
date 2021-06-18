@@ -1,3 +1,5 @@
 export { default as Hero } from './Hero'
 export { default as Section } from './Section'
 export { default as Sectiondouble } from './Sectiondouble'
+export { default as Sectiondoubled } from './Sectiondoubled'
+export { default as Sectionquatre } from './Sectionquatre'

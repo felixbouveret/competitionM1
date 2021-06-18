@@ -1,6 +1,6 @@
 <template>
   <section :class="$style.sectiongreen">
-    <Wrapper>
+    <Wrapper :class="$style.wrappercustomsection">
       <h3 :class="$style.sectiongreenh3">VOTRE MENU<br> DE La SEMAINE</h3>
       <p :class="$style.sectiongreentext">
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -29,6 +29,10 @@ export default defineComponent({
   width: 100vw;
   padding-top: 120px;
   height: 100vh;
+}
+
+.wrappercustomsection {
+  text-align: center;
 }
 
 .sectiongreenh3 {

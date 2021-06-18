@@ -20,6 +20,9 @@
         <Button :class="$style.sectiondoublebtn">Réserver mon chef !</Button>
       </div>
     </div>
+
+
+    
   </div>
   </section>
 </template>
@@ -46,7 +49,7 @@ export default defineComponent({
 .sectiongaucheint {
   height: 100vh;
   position: relative;
-  width: 60vw;
+  width: 55vw;
   float: right;
   padding: 50px;
 }
@@ -70,7 +73,7 @@ export default defineComponent({
 
 .sectiongaucheintint > p {
   text-align: left;
-  width: 65%;
+  width: 47%;
 }
 
 .sectiondoublebtn {
@@ -81,7 +84,7 @@ export default defineComponent({
 }
 
 .imagegauche {
-  width: 40vw;
+  width: 45vw;
   position: relative;
   height: 100vh;
   left: 0;
