@@ -38,7 +38,7 @@ export default defineComponent({
 
 <style lang="scss" module>
   .button {
-    padding: 20px;
+    padding: 12px;
     background-color: $black;
     border: 0;
     color: $white;
