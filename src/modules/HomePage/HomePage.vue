@@ -1,19 +1,10 @@
 <template>
-  <Wrapper>
-    <img
-      alt="Vue logo"
-      :src="Logo"
-    >
-    <Hero msg="Hello Vue 3 + TypeScript + Vite" />
-    <router-link to="/onboarding">
-      Go to Onboarding
-    </router-link>
-  </Wrapper>
+<Section></Section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Hero } from './components'
+import { Hero, Section } from './components'
 import Logo from '@/assets/logo.png'
 
 export default defineComponent({
@@ -21,6 +12,7 @@ export default defineComponent({
   
   components: {
     Hero,
+    Section,
   },
 
   setup() {
