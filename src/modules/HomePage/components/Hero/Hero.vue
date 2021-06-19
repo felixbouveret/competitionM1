@@ -3,6 +3,7 @@
     :class="$style.container"
     :style="currentSlideBgr"
   >
+    <SideNav />
     <Wrapper :class="$style.inner"> 
       <img
         :src="Logo"
@@ -58,6 +59,7 @@
 import { ref, defineComponent, reactive, computed } from 'vue'
 
 import Button from "@/components/Button"
+import SideNav from "@/components/SideNav"
 import arrowLeft from "@/assets/icons/arrow-left.svg"
 import arrowRight from "@/assets/icons/arrow-right.svg"
 import Logo from "@/assets/logo.svg"
@@ -67,7 +69,8 @@ export default defineComponent({
   name: 'HelloWorld',
 
   components: {
-    Button
+    Button,
+    SideNav
   },
 
   setup: () => {
@@ -107,43 +110,51 @@ export default defineComponent({
 
 <style lang="scss" module>
   .container {
-    padding: 32px 24px;
     position: relative;
+
     height: 98vh;
     min-height: 700px;
-    transition: background-image 1s;
+    padding: 32px 24px;
+
     background-position: center;
     background-size: cover;
 
+    transition: background-image 1s;
+
     &::after {
-      height: 100%;
-      width: 100%;
-      display: block;
       position: absolute;
       top: 0;
       left: 0;
-      content: '';
-      background: linear-gradient(0deg, rgba(29, 29, 29, 0.2), rgba(29, 29, 29, 0.2));
       z-index: 0;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(0deg, rgba(29, 29, 29, 0.2), rgba(29, 29, 29, 0.2));
+
+      content: '';
     }
   }
 
   .inner {
-    z-index: 1;
     position: relative;
+    z-index: 1;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     height: 100%;
   }
 
   .content {
-    color: $white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-content: center;
+    justify-content: center;
+
+    color: $white;
     text-align: center;
   }
 
@@ -153,10 +164,9 @@ export default defineComponent({
 
   .title {
     @include typo-title;
+    max-width: 920px;
 
-    text-transform: uppercase;
     margin-top: 19px;
-    max-width: 720px;
 
     @media (min-width: 720px) {
       margin-top: 4px;
@@ -166,9 +176,9 @@ export default defineComponent({
   }
 
   .button {
-    margin-top: 45px;
     display: block;
     align-self: center;
+    margin-top: 45px;
   }
 
   .controlsContainer {
@@ -185,8 +195,9 @@ export default defineComponent({
     margin-bottom: 32px;
 
     button {
-      background-color: transparent;
       border: 0;
+
+      background-color: transparent;
     }
 
     img {
