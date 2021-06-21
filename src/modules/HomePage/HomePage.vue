@@ -1,5 +1,6 @@
 <template>
   <Hero />
+  <Chief />
   <Section />
   <Sectiondouble />
   <Sectiondoubled />
@@ -10,13 +11,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Hero, Section, Sectiondouble, Sectiondoubled, Sectionquatre, Bfmbanner, UneHistoire } from './components'
- 
+import { Hero, Chief,Section, Sectiondouble, Sectiondoubled, Sectionquatre, Bfmbanner, UneHistoire } from './components'
+
 export default defineComponent({
   name: 'HomePage',
   
   components: {
     Hero,
+    Chief,
     Section,
     Sectiondouble,
     Sectiondoubled,
