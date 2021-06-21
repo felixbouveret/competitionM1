@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import Button  from '@/components/Button'
+import Button  from '@/components/Button/Button.vue'
 export default defineComponent({
   name: 'UneHistoire',
 

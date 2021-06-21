@@ -38,17 +38,20 @@ export default defineComponent({
 
 <style lang="scss" module>
   .button {
-    padding: 12px;
-    background-color: $black;
+    padding: 14px 35px 11px 35px;
     border: 0;
+
     color: $white;
+
+    background-color: $black;
     cursor: pointer;
 
     @include typo-headline;
   }
 
   .isLight {
-    background-color: $white;
     color: $black;
+
+    background-color: $white;
   }
 </style>
