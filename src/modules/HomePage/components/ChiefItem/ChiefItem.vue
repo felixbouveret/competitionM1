@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref, PropType } from 'vue'
 import Button from '@/components/Button/Button.vue'
 
 export default defineComponent({
@@ -60,7 +60,7 @@ export default defineComponent({
 
   props: {
     items: {
-      type: Array,
+      type: Array as PropType<any>,
       default: () => []
     },
     activeSlide: {

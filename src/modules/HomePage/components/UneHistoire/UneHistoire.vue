@@ -1,24 +1,28 @@
 <template>
   <section :class="$style.histoireback">
-<Wrapper>
-  <div :class="$style.histoirecentre">
-    <div :class="$style.histoiregauche"><img :src="Persil"></div>
-    <div :class="$style.histoiredroite">
-      <div>
-        <h3 :class="$style.h3left">UNE HISTOIRE <br> D’humains</h3>
-          <p>
-            1 heure, c’est le temps moyen que vous passez en cuisine
-            quotidiennement. Ne réfléchissez plus à vos repas et gagnez du temps
-            sur vos courses, votre cuisine et la vaisselle grâce à Persil &
-            Romarin.
-          </p>
-          <Button :class="$style.sectiondoublebtn">
-            En savoir plus
-          </Button>
+    <Wrapper>
+      <div :class="$style.histoirecentre">
+        <div :class="$style.histoiregauche">
+          <img :src="Persil">
         </div>
-    </div>
-  </div>
-</Wrapper>
+        <div :class="$style.histoiredroite">
+          <div>
+            <h3 :class="$style.h3left">
+              UNE HISTOIRE <br> D’humains
+            </h3>
+            <p>
+              1 heure, c’est le temps moyen que vous passez en cuisine
+              quotidiennement. Ne réfléchissez plus à vos repas et gagnez du temps
+              sur vos courses, votre cuisine et la vaisselle grâce à Persil &
+              Romarin.
+            </p>
+            <Button>
+              En savoir plus
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
   </section>
 </template>
 

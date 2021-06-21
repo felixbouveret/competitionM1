@@ -18,14 +18,14 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref, PropType } from 'vue'
 
 export default defineComponent({
   name: 'ChiefNav',
 
   props: {
     items: {
-      type: Array,
+      type: Array as PropType<any>,
       default: () => []
     }
   },
@@ -34,7 +34,7 @@ export default defineComponent({
   
   setup (props, { emit }) {
     const activeId = ref(0)
-    const buttons = ref([])
+    const buttons = ref<any>([])
 
     const setActiveId = (id) => {
       activeId.value = id
