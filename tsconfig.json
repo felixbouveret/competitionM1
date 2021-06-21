@@ -6,6 +6,7 @@
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
+    "noImplicitAny": false,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": [
@@ -14,7 +15,12 @@
     ],
     "types": [
       "node"
-    ]
+    ],
+    "paths": {
+      "@": [
+        "./src"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts",

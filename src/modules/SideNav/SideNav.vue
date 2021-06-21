@@ -23,7 +23,7 @@
     <ul :class="$style.menu">
       <li
         v-for="({ text, url, subItems, hasSubMenu }, itemId) in items"
-        :key="itemId"
+        :key="itemId.toString()"
         :class="[$style.item, { [$style.hasSubMenu]: hasSubMenu }]"
         @mouseenter="hasSubMenu ? toggleSubMenuActive() : null "
         @mouseleave="hasSubMenu ? toggleSubMenuActive() : null "
@@ -40,7 +40,7 @@
           <ul :class="$style.subMenu">
             <li
               v-for="(subItem, subItemId) in subItems"
-              :key="subItemId"
+              :key="subItemId.toString()"
               :class="$style.item"
             >
               <a
@@ -59,7 +59,7 @@
     <ul :class="$style.socialsContainer">
       <li
         v-for="({url, icon, text}, socialId) in socials"
-        :key="socialId"
+        :key="socialId.toString()"
       >
         <a :href="url">
           <img

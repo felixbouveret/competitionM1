@@ -1,6 +1,6 @@
 <template>
   <section :class="$style.sectiondouble">
-    <div :class="$style.sectiondroite">
+    <div>
       <div :class="$style.sectiondroiteint">
         <h3 :class="$style.h3left">
           Vos repas sains et équilibrés personnalisables à volonté
@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Button from "@/components/Button";
+import Button from "@/components/Button/Button.vue";
 
 export default defineComponent({
   name: "Sectiondoubled",

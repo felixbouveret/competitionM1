@@ -58,8 +58,8 @@
 <script lang="ts">
 import { ref, defineComponent, reactive, computed } from 'vue'
 
-import Button from "@/components/Button"
-import SideNav from "@/components/SideNav"
+import Button from "@/components/Button/Button.vue"
+import SideNav from "@/components/SideNav/SideNav.vue"
 import arrowLeft from "@/assets/icons/arrow-left.svg"
 import arrowRight from "@/assets/icons/arrow-right.svg"
 import Logo from "@/assets/logo.svg"
