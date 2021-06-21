@@ -8,6 +8,11 @@
       alt=""
     >
   </button>
+  <div
+    v-if="headerActive"
+    :class="$style.backdrop"
+    @click="toggleHeader()"
+  />
   <header
     :class="[
       $style.container, 
@@ -17,7 +22,7 @@
   >
     <ul :class="$style.menu">
       <li
-        v-for="({ text, url, subItems, hasSubMenu }, itemId) in NAV_ITEMS"
+        v-for="({ text, url, subItems, hasSubMenu }, itemId) in items"
         :key="itemId"
         :class="[$style.item, { [$style.hasSubMenu]: hasSubMenu }]"
         @mouseenter="hasSubMenu ? toggleSubMenuActive() : null "
@@ -51,18 +56,33 @@
         </template>
       </li>
     </ul>
+    <ul :class="$style.socialsContainer">
+      <li
+        v-for="({url, icon, text}, socialId) in socials"
+        :key="socialId"
+      >
+        <a :href="url">
+          <img
+            :src="icon"
+            :alt="text"
+          >
+        </a>
+      </li>
+    </ul>
   </header>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import NAV_ITEMS from "./NAV_ITEMS";
+import {items, socials} from "./NAV_DATA";
 import BurgerIcon from '@/assets/icons/burger-menu.svg'
 
 export default defineComponent({
   name: "SideNavModule",
 
   setup() {
+    
+    
     const subMenuActive = ref(false)
     const toggleSubMenuActive = () => {
       subMenuActive.value = !subMenuActive.value
@@ -78,7 +98,8 @@ export default defineComponent({
       toggleHeader,
       subMenuActive,
       headerActive,
-      NAV_ITEMS,
+      items,
+      socials,
       BurgerIcon,
     };
   },
@@ -248,5 +269,27 @@ export default defineComponent({
   @media (min-width: 1400px) {
     display: none;
   }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+}
+
+.socialsContainer {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  transform: translateX(-50%);
 }
 </style>

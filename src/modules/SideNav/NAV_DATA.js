@@ -1,4 +1,19 @@
-export default [
+import facebookIcon from '@/assets/icons/facebook.svg'
+import instagramIcon from '@/assets/icons/instagram.svg'
+
+export const socials = [
+  {
+    icon: facebookIcon,
+    text: 'facebookIcon',
+    url: '#'
+  },
+  {
+    icon: instagramIcon,
+    text: 'instagramIcon',
+    url: '#'
+  }
+]
+export const items = [
   {
     text: 'Accueil',
     url: '#',
