@@ -1,6 +1,10 @@
 <template>
-  <section :class="$style.sectiondouble">
+  <section :class="$style.sectiondoubled">
     <div>
+      <img
+        :class="$style.imagedroitehidden"
+        :src="Champignon"
+      >
       <div :class="$style.sectiondroiteint">
         <h3 :class="$style.h3left">
           Vos repas sains et équilibrés personnalisables à volonté
@@ -41,11 +45,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss" module>
-.sectiondouble {
+.sectiondoubled {
   width: 100vw;
   height: 100vh;
 
-  background-color: #e5e5e5;
+  background-color: #f4eee7;
 }
 
 .sectiondroiteint {
@@ -90,6 +94,11 @@ export default defineComponent({
   margin-top: 35px;
 }
 
+.imagedroitehidden {
+  display: none;
+  height: 100vh;
+}
+
 .imagedroite {
   position: relative;
   right: 0;
@@ -97,6 +106,37 @@ export default defineComponent({
   float: right;
   width: 55vw;
   height: 100vh;
+}
+
+@media (max-width: 720px) {
+  .sectiondroiteint {
+    width: 100vw;
+
+    background-color: #f4eee7;
+  }
+
+  .h3left {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .imagedroitehidden {
+    display: block;
+    width: 100vw;
+  }
+
+  .imagedroite {
+    display: none;
+  }
+
+  .sectiondroiteintint {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .sectiondoubled {
+    height: auto;
+  }
 }
 
 </style>

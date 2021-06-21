@@ -23,7 +23,7 @@ export default defineComponent({
   height: 100vh;
   padding-top: 120px;
 
-  background-color: #152921;
+  background-color: #20332b;
 }
 
 .wrappercustomsection {
@@ -39,5 +39,18 @@ export default defineComponent({
 
   line-height: 31px;
   text-align: center;
+}
+
+@media (max-width: 720px) {
+  .sectiongreen {
+    display: flex;
+    height: 100vh;
+  }
+
+  .sectiongreenh4 {
+    width: 90%;
+
+    font-size: 20px;
+  }
 }
 </style>

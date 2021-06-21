@@ -38,7 +38,7 @@ export default defineComponent({
   height: 100vh;
   padding-top: 120px;
 
-  background-color: #152921;
+  background-color: #20332b;
 }
 
 .wrappercustomsection {
@@ -65,6 +65,12 @@ export default defineComponent({
 
 .sectiongreenbtn {
   margin-top: 35px;
+}
+
+@media (max-width: 720px) {
+  .sectiongreenh3 {
+    font-size: 40px;
+  }
 }
 </style>
 

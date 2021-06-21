@@ -47,7 +47,7 @@ export default defineComponent({
   width: 100vw;
   height: 100vh;
 
-  background-color: #e5e5e5;
+  background-color: #f4eee7;
 }
 
 .sectiongaucheint {
@@ -101,5 +101,28 @@ export default defineComponent({
   height: 100vh;
 }
 
+@media (max-width: 720px) {
+  .sectiongaucheint {
+    width: 100vw;
+  }
+
+  .imagegauche {
+    width: 100vw;
+  }
+
+  .sectiongaucheintint {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .sectiondouble {
+    height: auto;
+  }
+
+  .h3left {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
 </style>
 

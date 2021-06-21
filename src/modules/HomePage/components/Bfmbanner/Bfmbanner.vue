@@ -11,6 +11,26 @@
 <li>adaptable</li>
 <li>savoir faire</li>
 <li>fraicheur</li>
+<li>Equalité</li>
+<li>proximité</li>
+<li>adaptable</li>
+<li>fraicheur</li>
+<li>Eco responsable</li>
+<li>qualité</li>
+<li>proximité</li>
+<li>adaptable</li>
+<li>savoir faire</li>
+<li>fraicheur</li>
+<li>Equalité</li>
+<li>proximité</li>
+<li>adaptable</li>
+<li>fraicheur</li>
+<li>Eco responsable</li>
+<li>qualité</li>
+<li>proximité</li>
+<li>adaptable</li>
+<li>savoir faire</li>
+<li>fraicheur</li>
   </ul>
 <div :class="$style.bfmline"> </div>
 </section>
@@ -26,6 +46,8 @@ export default defineComponent({
 
 <style lang="scss" module>
 .bfmback {
+  display: inline-block;
+
   background-color: #f4eee7;
 }
 
@@ -40,11 +62,11 @@ export default defineComponent({
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 
-  -webkit-animation: animationframes linear 40s;
-  -moz-animation: animationframes linear 40s;
-  -o-animation: animationframes linear 40s;
-  -ms-animation: animationframes linear 40s;
-  animation: animationFrames linear 40s;
+  -webkit-animation: animationframes linear 210s;
+  -moz-animation: animationframes linear 210s;
+  -o-animation: animationframes linear 210s;
+  -ms-animation: animationframes linear 210s;
+  animation: animationFrames linear 210s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
@@ -73,7 +95,7 @@ export default defineComponent({
   }
 
   50% {
-    transform: translate(-2400px, 0);
+    transform: translate(-7200px, 0);
   }
 
   100% {
@@ -87,7 +109,7 @@ export default defineComponent({
   }
 
   50% {
-    transform: translate(-2400px, 0);
+    transform: translate(-7200px, 0);
   }
 
   100% {
@@ -101,7 +123,7 @@ export default defineComponent({
   }
 
   50% {
-    transform: translate(-2400px, 0);
+    transform: translate(-7200px, 0);
   }
 
   100% {
@@ -115,7 +137,7 @@ export default defineComponent({
   }
 
   50% {
-    transform: translate(-2400px, 0);
+    transform: translate(-7200px, 0);
   }
 
   100% {
@@ -129,11 +151,22 @@ export default defineComponent({
   }
 
   50% {
-    transform: translate(-2400px, 0);
+    transform: translate(-7200px, 0);
   }
 
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 720px) {
+  .bfmul {
+    padding: 0;
+  }
+
+  .bfmul > li {
+    font-size: 40px;
+    font-size: 30px;
   }
 }
 </style>
