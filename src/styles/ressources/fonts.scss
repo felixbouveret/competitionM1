@@ -53,3 +53,9 @@
   font-family: "Karla", Courier, monospace;
   line-height: 19px;
 }
+
+@mixin typo-footer {
+  font-size: 16px;
+  font-family: "TrendSansOne", Courier, monospace;
+  line-height: 19px;
+}

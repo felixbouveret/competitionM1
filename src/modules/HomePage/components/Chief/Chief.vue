@@ -122,6 +122,6 @@ export default defineComponent({
 }
 
 .items {
-  padding: 0 64px;
+  padding: 0 24px;
 }
 </style>

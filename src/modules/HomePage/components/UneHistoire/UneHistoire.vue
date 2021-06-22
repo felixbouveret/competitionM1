@@ -10,7 +10,7 @@
             <h3 :class="$style.h3left">
               UNE HISTOIRE <br> D’humains
             </h3>
-            <p>
+            <p :class="$style.texthistoire">
               1 heure, c’est le temps moyen que vous passez en cuisine
               quotidiennement. Ne réfléchissez plus à vos repas et gagnez du temps
               sur vos courses, votre cuisine et la vaisselle grâce à Persil &
@@ -46,6 +46,10 @@ export default defineComponent({
   height: 100vh;
 
   background-color: #f4eee7;
+}
+
+.texthistoire {
+  max-width: 50%;
 }
 
 .histoirecentre {

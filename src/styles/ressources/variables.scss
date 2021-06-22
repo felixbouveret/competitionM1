@@ -6,7 +6,7 @@ $mustard: #e69112;
 $cream: #f4eee7;
 
 @mixin inner {
-  max-width: 1520px;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }

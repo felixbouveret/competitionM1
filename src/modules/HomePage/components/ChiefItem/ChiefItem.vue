@@ -140,7 +140,7 @@ export default defineComponent({
 
   color: $cactus;
 
-  @media only screen and (min-width: 800) {
+  @media only screen and (min-width: 800px) {
     @include typo-big-title;
   }
 }
@@ -152,7 +152,6 @@ export default defineComponent({
 
   @media only screen and (min-width: 1120px) {
     flex-direction: row;
-    gap: 54px;
   }
 }
 
@@ -164,7 +163,7 @@ export default defineComponent({
 }
 
 .description {
-  min-width: 0;
+  max-width: 380px;
 }
 
 .button {

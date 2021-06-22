@@ -30,7 +30,7 @@
         </ul>
         <p :class="$style.copyright">
           © 2021 PERSIL & ROMARIN 
-          - Par AIL & FINES HERBES bio
+          - PAR AIL & FINES HERBES BIO
         </p>
       </div>
     </Wrapper>
@@ -89,6 +89,7 @@ export default defineComponent({
 }
 
 .linkList {
+  @include typo-footer;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 18px;
@@ -151,7 +152,7 @@ export default defineComponent({
 }
 
 .copyright {
-  @include typo-body;
+  @include typo-footer;
   margin-top: 24px;
 
   color: $cactus;
