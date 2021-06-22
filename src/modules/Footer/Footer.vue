@@ -96,12 +96,29 @@ export default defineComponent({
   margin-top: 32px;
 
   a {
+    position: relative;
+
     color: $cactus;
     text-transform: uppercase;
     text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 0;
+      height: 1px;
+
+      background-color: $cactus;
+
+      transition: width 0.3s;
+
+      content: '';
+    }
+
+    &:hover::before {
+      width: 100%;
     }
   }
 

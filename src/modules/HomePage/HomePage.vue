@@ -1,5 +1,5 @@
 <template>
-  <Hero />
+  <Hero :class="$style.hero" />
   <Header />
   <Chief />
   <Section />
@@ -37,3 +37,14 @@ export default defineComponent({
 })
 </script>
 
+<style lang="scss" module>
+.hero {
+  z-index: 6;
+
+  margin-bottom: -84px;
+
+  @media only screen and (min-width: 800px) {
+    margin-bottom: -100px;
+  }
+}
+</style>
