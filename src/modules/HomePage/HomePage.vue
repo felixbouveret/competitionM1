@@ -3,8 +3,11 @@
   <Header />
   <Chief />
   <Section />
-  <Sectiondouble />
-  <Sectiondoubled />
+  <Sectiondouble :data="quiconcesSection1" />
+  <Sectiondouble
+    is-reverse
+    :data="quiconcesSection2"
+  />
   <Sectionquatre />
   <Bfmbanner />
   <UneHistoire />
@@ -14,9 +17,20 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Hero, Chief,Section, Sectiondouble, Sectiondoubled, Sectionquatre, Bfmbanner, UneHistoire, NewsLetter } from './components'
+import { 
+  Hero,
+  Chief,
+  Section,
+  Sectiondouble, 
+  Sectionquatre,
+  Bfmbanner,
+  UneHistoire,
+  NewsLetter
+} from './components'
+
 import Footer from '@/components/Footer/Footer.vue'
 import Header from '@/components/Header/Header.vue'
+import {quiconcesSection1, quiconcesSection2} from './message'
 
 export default defineComponent({
   name: 'HomePage',
@@ -26,7 +40,6 @@ export default defineComponent({
     Chief,
     Section,
     Sectiondouble,
-    Sectiondoubled,
     Sectionquatre,
     Bfmbanner,
     UneHistoire,
@@ -34,6 +47,13 @@ export default defineComponent({
     Footer,
     Header
   },
+
+  setup() {
+    return {
+      quiconcesSection1, 
+      quiconcesSection2
+    }
+  }
 })
 </script>
 

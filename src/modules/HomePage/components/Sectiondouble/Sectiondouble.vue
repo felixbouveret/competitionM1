@@ -1,132 +1,163 @@
 <template>
-  <section :class="$style.sectiondouble">
-    <div>
-      <img
-        :class="$style.imagegauche"
-        :src="Decoupe"
-      >
-
-      <div :class="$style.sectiongaucheint">
-        <h3 :class="$style.h3left">
-          Economisez 1 heure de votre temps tous les jours
-        </h3>
-        <div :class="$style.sectiongaucheintint">
-          <p>
-            1 heure, c’est le temps moyen que vous passez en cuisine
-            quotidiennement. Ne réfléchissez plus à vos repas et gagnez du temps
-            sur vos courses, votre cuisine et la vaisselle grâce à Persil &
-            Romarin.
-          </p>
-          <Button :class="$style.sectiondoublebtn">
-            Réserver mon chef !
-          </Button>
-        </div>
+  <section :class="[$style.container, { [$style.isReverse]: isReverse }]">
+    <img
+      :class="$style.view"
+      :src="data.img"
+    >
+    <div :class="$style.content">
+      <h3 :class="$style.title">
+        {{ data.title }}
+      </h3>
+      <div :class="$style.desc">
+        <p>
+          {{ data.desc }}
+        </p>
+        <Button :class="$style.button">
+          {{ data.button }}
+        </Button>
       </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 import Button from "@/components/Button/Button.vue";
-import Decoupe from "../../assets/decoupe.png"
+
 export default defineComponent({
   name: "Sectiondouble",
 
   components: {
     Button,
   },
-  setup(){
-    return{Decoupe}
+
+  props: {
+    isReverse: {
+      type: Boolean,
+      default: false
+    },
+    data: {
+      type: Object as PropType<any>,
+      default: ():any => ({})
+    }
+  },
+  
+  setup() {
+    return{ }
   }
 });
 </script>
 
 <style lang="scss" module>
-.sectiondouble {
-  width: 100vw;
-  height: 100vh;
+.container {
 
-  background-color: #f4eee7;
+  background-color: $cream;
+
+  @media only screen and (min-width: 720px) {
+    display: flex;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: 100vh;
+    min-height: 720px;
+    max-height: 1000px;
+  }
 }
 
-.sectiongaucheint {
-  position: relative;
+.view {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
 
-  float: right;
-  width: 55vw;
-  height: 100vh;
-  padding: 50px;
+  @media only screen and (min-width: 720px) {
+    width: 45vw;
+    max-height: none;
+  }
 }
 
-.sectiongaucheintint {
-  position: absolute;
-  bottom: 91px;
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 132px 24px;
 
-  width: 70%;
-  margin-left: 70px;
+  @media only screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 804px;
+  }
+}
+
+.desc {
   padding-bottom: 30px;
-  border-bottom: 1px black solid;
+
+  @media only screen and (min-width: 1200px) {
+    max-width: 350px;
+    margin-left: 80px;
+    border-bottom: 1px $black solid;
+  }
 }
 
-.h3left {
-  @include typo-big-title;
+.title {
+  @include typo-title;
 
-  color: #175b06;
+  color: $cactus;
 
-  font-size: 46px;
-  line-height: 45px;
-
-  text-align: left;
-  text-transform: uppercase;
+  @media only screen and (min-width: 1200px) {
+    @include typo-big-title;
+  }
 }
 
-.sectiongaucheintint > p {
-  width: 313px;
+.desc > p {
+  margin-top: 32px;
+  margin-right: 32px;
+  margin-left: 64px;
+  padding-bottom: 24px;
+  border-bottom: 1px $black solid;
 
-  text-align: left;
+  @media only screen and (min-width: 1200px) {
+    margin: 0;
+    border-bottom: 0;
+  }
 }
 
-.sectiondoublebtn {
-  position: relative;
-  left: 0;
+.button {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  margin-top: 42px;
 
-  float: left;
-  margin-top: 35px;
+  font-weight: 400;
+
+  font-size: 12px !important;
+
+  @media only screen and (min-width: 1200px) {
+    max-width: none;
+    margin: 0;
+  }
 }
 
-.imagegauche {
-  position: relative;
-  left: 0;
-
-  float: left;
-  width: 45vw;
-  height: 100vh;
-}
-
-@media only screen and (max-width: 720px) {
-  .sectiongaucheint {
-    width: 100vw;
-    padding: 30px;
+.isReverse {
+  .desc > p {
+    margin-left: 32px;
   }
 
-  .imagegauche {
-    width: 100vw;
-    height: auto;
-  }
+  @media only screen and (min-width: 720px) {
+    flex-direction: row-reverse;
 
-  .sectiongaucheintint {
-    width: 100%;
-    margin-left: 0;
-  }
+    .view {
+      flex-grow: 1;
+    }
 
-  .sectiondouble {
-    height: auto;
-  }
+    .content {
+      width: 45vw;
+      max-width: none;
+    }
 
-  .h3left {
-    font-size: 30px;
-    line-height: 50px;
+    .title {
+      max-width: 804px;
+    }
   }
 }
 </style>
