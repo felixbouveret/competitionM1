@@ -15,6 +15,7 @@
       >
         EN SAVOIR PLUS
       </Button>
+      <img :class="$style.imagefit" :src="Carousel">
     </Wrapper>
   </section>
 </template>
@@ -22,6 +23,7 @@
 <script lang="ts">
 import {defineComponent} from 'vue'
 import Button  from '@/components/Button/Button.vue'
+import Carousel from "../../assets/carousel.png"
 
 export default defineComponent({
   name: 'Section',
@@ -29,13 +31,24 @@ export default defineComponent({
   components: {
     Button,
   },
+  setup(){
+    return{Carousel}
+  }
 })
 </script>
 
 <style lang="scss" module>
+
+.imagefit {
+  width: 100vw;
+  margin-top: 44px;
+  margin-bottom: 24px;
+  margin-left: -20px;
+}
+
 .sectiongreen {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 120px 20px 20px 20px;
 
   background-color: #20332b;
@@ -70,6 +83,15 @@ export default defineComponent({
 @media only screen and (max-width: 720px) {
   .sectiongreenh3 {
     font-size: 40px;
+  }
+
+  .imagefit {
+    width: 100vw;
+    height: 360px;
+    margin-top: 44px;
+    margin-bottom: 24px;
+    margin-left: -20px;
+    object-fit: cover;
   }
 }
 </style>
