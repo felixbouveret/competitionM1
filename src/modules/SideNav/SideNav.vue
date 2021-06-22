@@ -166,7 +166,7 @@ export default defineComponent({
     transform: translateX(0);
   }
 
-  @media (min-width: 1400px) {
+  @media only screen and (min-width: 1400px) {
     transform: translateX(0);
   }
 }
@@ -266,7 +266,7 @@ export default defineComponent({
 
   background-color: transparent;
 
-  @media (min-width: 1400px) {
+  @media only screen and (min-width: 1400px) {
     display: none;
   }
 }
