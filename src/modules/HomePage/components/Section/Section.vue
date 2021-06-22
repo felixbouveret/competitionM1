@@ -61,11 +61,13 @@ export default defineComponent({
 
   min-height: 100vh;
 
+  padding-bottom: 120px;
+
   background-color: #20332b;
 }
 
 .container {
-  padding: 220px 20px 20px 20px;
+  padding: 240px 20px 20px 20px;
 }
 
 .wrappercustomsection {

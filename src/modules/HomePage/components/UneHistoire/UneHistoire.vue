@@ -63,13 +63,13 @@ export default defineComponent({
   @media only screen and (min-width: 720px) {
     display: flex;
     align-items: center;
-    padding: 0 24px;
+    padding: 120px 24px;
   }
 
   @media only screen and (min-width: 1200px) {
     height: 100vh;
     min-height: 720px;
-    max-height: 1000px;
+    max-height: 1200px;
   }
 }
 

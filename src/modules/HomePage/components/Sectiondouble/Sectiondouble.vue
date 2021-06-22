@@ -91,8 +91,21 @@ export default defineComponent({
 .desc {
   padding-bottom: 30px;
 
+  & > p {
+    margin-top: 32px;
+    margin-right: 32px;
+    margin-left: 64px;
+    padding-bottom: 24px;
+    border-bottom: 1px $black solid;
+
+    @media only screen and (min-width: 1200px) {
+      max-width: 350px;
+      margin: 0;
+      border-bottom: 0;
+    }
+  }
+
   @media only screen and (min-width: 1200px) {
-    max-width: 350px;
     margin-left: 80px;
     border-bottom: 1px $black solid;
   }
@@ -108,19 +121,6 @@ export default defineComponent({
   }
 }
 
-.desc > p {
-  margin-top: 32px;
-  margin-right: 32px;
-  margin-left: 64px;
-  padding-bottom: 24px;
-  border-bottom: 1px $black solid;
-
-  @media only screen and (min-width: 1200px) {
-    margin: 0;
-    border-bottom: 0;
-  }
-}
-
 .button {
   display: block;
   width: 100%;
@@ -133,7 +133,7 @@ export default defineComponent({
   font-size: 12px !important;
 
   @media only screen and (min-width: 1200px) {
-    max-width: none;
+    max-width: 350px;
     margin: 0;
   }
 }
@@ -152,7 +152,14 @@ export default defineComponent({
 
     .content {
       width: 45vw;
-      max-width: none;
+    }
+
+    .desc {
+      max-width: 532px;
+
+      & > p {
+        margin-left: 0;
+      }
     }
 
     .title {
