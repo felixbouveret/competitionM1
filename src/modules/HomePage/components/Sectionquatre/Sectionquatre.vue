@@ -77,10 +77,12 @@ export default defineComponent({
 
 <style lang="scss" module>
 .sectiongreen {
+  display: flex;
+  align-items: center;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 720px;
   padding: 0 24px;
-  padding-top: 120px;
 
   background-color: $green;
 }
@@ -120,13 +122,6 @@ export default defineComponent({
 .author {
   @include typo-body;
   color: $white;
-}
-
-@media only screen and (max-width: 720px) {
-  .sectiongreen {
-    display: flex;
-    height: 100vh;
-  }
 }
 
 .buttonContainer {
