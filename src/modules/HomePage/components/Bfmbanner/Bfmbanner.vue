@@ -46,7 +46,7 @@ export default defineComponent({
 
 <style lang="scss" module>
 .bfmback {
-  display: inline-block;
+  display: block;
 
   background-color: #f4eee7;
 }
