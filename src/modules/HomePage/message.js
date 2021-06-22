@@ -8,7 +8,7 @@ export const quiconcesSection1 = {
   img: Decoupe,
 }
 export const quiconcesSection2 = {
-  title: 'Des repas sains et équilibrés qui vous ressemblent',
+  title: 'Des repas sains et équilibrés sur mesure',
   desc: 'Les recettes proposées par Persil & Romarin sont élaborées avec nos chefs et notre diététicienne pour vous garantir le goût et la ligne. Personnalisez à volonté vos repas : vous ne voulez pas de brocolis, moins de sel, plus épicé, sans gluten ou sans sucre ?',
   button: 'En savoir plus',
   img: Champignon,
