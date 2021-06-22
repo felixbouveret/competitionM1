@@ -112,7 +112,7 @@ export default defineComponent({
     height: 32px;
 
     @media only screen and (min-width: 800px) {
-      height: 48px;
+      height: 35.99px;
     }
   }
 
@@ -148,7 +148,7 @@ export default defineComponent({
     gap: 16px;
 
     img {
-      width: 48px;
+      width: 35.99px;
     }
   }
 }

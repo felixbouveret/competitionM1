@@ -107,6 +107,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" module>
+
 .container {
   position: absolute;
   top: 0;
@@ -289,5 +290,9 @@ export default defineComponent({
   align-items: center;
 
   transform: translateX(-50%);
+
+  & > li > a > img {
+    height: 35.99px;
+  }
 }
 </style>

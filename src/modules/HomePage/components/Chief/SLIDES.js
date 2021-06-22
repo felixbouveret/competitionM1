@@ -12,7 +12,7 @@ export default [
     img: chop
   },
   {
-    menuText: 'ETAPE 2',
+    menuText: 'LES ALIMENTS',
     step: 'deuxième ÉTAPE',
     title: 'Les courses gérées par votre chef',
     description: 'Votre chef s\'occupe de vos courses alimentaires auprès de nos boutiques partenaires sélectionnées pour la qualité de leurs produits.',

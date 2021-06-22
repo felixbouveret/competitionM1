@@ -42,6 +42,7 @@ export default defineComponent({
     border: 0;
 
     color: $white;
+    font-size: 16px !important;
 
     background-color: $black;
     cursor: pointer;
