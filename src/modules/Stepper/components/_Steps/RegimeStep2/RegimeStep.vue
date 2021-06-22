@@ -9,17 +9,12 @@
       @on-select="seletectedValue = $event"
     />
   </div>
-  <SubmitButton
-    :progression="{current: 2, max: 6}"
-    @submit-button="$emit('next-step')"
-  />
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, PropType } from "vue";
 import SingleChoice from "../../SingleChoice";
 import Message from "../../Message"
-import SubmitButton from "../../SubmitButton"
 import StepData from './StepData'
 
 export default defineComponent({
@@ -28,7 +23,6 @@ export default defineComponent({
   components: {
     Message,
     SingleChoice,
-    SubmitButton
   },    
 
   props: {

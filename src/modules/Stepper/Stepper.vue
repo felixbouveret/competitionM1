@@ -5,6 +5,11 @@
       :progression="progression"
       @next-step="onNextStep()"
     />
+    <SubmitButton
+      v-if="currentStep.hasNavigation"
+      :progression="progression"
+      @submit-button="onNextStep()"
+    />
   </section>
 </template>
 
@@ -12,20 +17,24 @@
 import { computed, defineComponent, ref, } from "vue";
 import StepsList from './stepsList'
 import StepDefinitions from './stepsDefinitions'
+import SubmitButton from "./components/SubmitButton/SubmitButton.vue";
 
 export default defineComponent({
   name: "Stepper",
 
+  components: { SubmitButton },
+
   setup() {
     const currentStepIndex = ref(0);
     const activeStepName = computed(() => StepsList[currentStepIndex.value]);
-    const currentStep = computed(() => StepDefinitions[activeStepName.value]);
+    const currentStep = computed(() => StepDefinitions[activeStepName.value])
+    ;
     const onNextStep = () => {
       currentStepIndex.value++;
     };
     const progression = computed(() => ({
-      current: currentStepIndex.value + 1,
-      max: StepsList.length
+      current: currentStepIndex.value,
+      max: StepsList.length -1
     }));
     return {
       onNextStep,

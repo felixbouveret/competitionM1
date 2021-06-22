@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, ref } from "vue";
+import { computed, defineComponent, PropType  } from "vue";
 
 export default defineComponent({
   name: "Progression",
@@ -26,8 +26,7 @@ export default defineComponent({
   },
 
   setup(props) {
-    const progressStep = ref(props.progression)
-    const progressionTmp = computed(() => progressStep.value.current * 100 / progressStep.value.max)
+    const progressionTmp = computed(() => props.progression.current * 100 / props.progression.max)
 
     return {
       progressionTmp
@@ -54,5 +53,7 @@ export default defineComponent({
   height: 100%;
 
   background-color: $cactus;
+
+  transition: width 0.3s;
 }
 </style>

@@ -19,6 +19,7 @@
         <Button
           is-light
           :class="$style.button"
+          @on-click="router.push('onboarding')"
         >
           Réserver mon chef !
         </Button>
@@ -66,6 +67,7 @@ import arrowLeft from "@/assets/icons/arrow-left.svg"
 import arrowRight from "@/assets/icons/arrow-right.svg"
 import Logo from "@/assets/logo.svg"
 import SLIDES from './SLIDES'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'HelloWorld',
@@ -77,6 +79,8 @@ export default defineComponent({
   },
 
   setup: () => {
+    const router = useRouter()
+
     const slides = reactive(SLIDES)
     const count = ref(0)
     const currentSlideBgr = computed(() => `background-image: url('${slides[count.value].url}')`)
@@ -111,7 +115,8 @@ export default defineComponent({
       arrowLeft,
       arrowRight,
       increment,
-      decrement
+      decrement,
+      router
     }
   }
 })
