@@ -57,7 +57,7 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, reactive, computed } from 'vue'
+import { ref, defineComponent, reactive, computed, onMounted } from 'vue'
 
 import Divider from "@/components/Divider/Divider.vue"
 import Button from "@/components/Button/Button.vue"
@@ -84,18 +84,24 @@ export default defineComponent({
     const slidesCount = computed(() => slides.length)
 
     const increment = () => {
-      if(count.value < slides.length) {
+      if(count.value < slides.length -1) {
         count.value++
       }
       else {
         count.value = 0
       }
-      console.log(count.value);
-      
     } 
     const decrement = () => {
-      count.value--
+      if(count.value) {
+        count.value--
+      } else {
+        count.value = slides.length - 1
+      }
     } 
+
+    onMounted(() => {
+      setInterval(increment, 5000)
+    })
 
     return { 
       count,

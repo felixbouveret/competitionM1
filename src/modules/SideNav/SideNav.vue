@@ -180,7 +180,8 @@ export default defineComponent({
 .subMenu {
   position: absolute;
   top: 0;
-  left: calc(-100% - 2px);
+  left: 0;
+  z-index: 1;
 
   justify-content: center;
   height: 100%;
@@ -195,6 +196,11 @@ export default defineComponent({
   transition-property: opacity, transform;
 
   pointer-events: none;
+
+  @media only screen and (min-width: 540px) {
+    left: calc(-100% - 2px);
+    z-index: 0;
+  }
 }
 
 .hasSubMenu:hover .subMenu {
