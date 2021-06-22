@@ -110,16 +110,14 @@ export default defineComponent({
 .container {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   z-index: 10;
 
   display: flex;
   align-items: center;
   height: 100%;
 
-  transform: translateX(101%);
-
-  transition: transform 0.3s;
+  transition: right 0.3s;
 
   &::before {
     position: absolute;
@@ -163,11 +161,11 @@ export default defineComponent({
   }
 
   &.headerActive {
-    transform: translateX(0);
+    right: 0;
   }
 
   @media only screen and (min-width: 1400px) {
-    transform: translateX(0);
+    right: 0;
   }
 }
 
