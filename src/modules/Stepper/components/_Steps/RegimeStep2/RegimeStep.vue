@@ -4,7 +4,7 @@
       :title="title"
       :question="question"
     />
-    <SingleChoice
+    <MultipleChoice
       :items="answers"
       @on-select="seletectedValue = $event"
     />
@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, PropType } from "vue";
-import SingleChoice from "../../SingleChoice";
+import MultipleChoice from "../../MultipleChoice";
 import Message from "../../Message"
 import StepData from './StepData'
 
@@ -22,7 +22,7 @@ export default defineComponent({
 
   components: {
     Message,
-    SingleChoice,
+    MultipleChoice,
   },    
 
   props: {

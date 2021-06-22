@@ -6,6 +6,7 @@
       :class="[$style.button, {[$style.isSelected]: isSelected(itemId)}]"
       @click="selectOption(data)"
     >
+      <div :class="$style.dot" />
       {{ text }}
     </button>
   </div>
@@ -25,14 +26,20 @@ export default defineComponent({
   },
 
   setup(props) {
-    const selectedOption = ref(null)
+    const selectedOption = ref<any>([])
     const items = ref(props.items)
 
     const selectOption = (option) => {
-      selectedOption.value = option 
+      if(selectedOption.value.includes(option)) {
+        const optionIndex = selectedOption.value.indexOf(option);
+        selectedOption.value.splice(optionIndex, 1)
+      } else {
+        selectedOption.value.push(option) 
+      }
     }
+    
     const isSelected = (id) => {  
-      return items.value[id].data === selectedOption.value
+      return selectedOption.value.includes(items.value[id].data)
     }
     return {
       selectOption,
@@ -48,10 +55,15 @@ export default defineComponent({
 }
 
 .button {
+  position: relative;
+
   display: block;
   width: 100%;
   padding: 16px;
-  border: solid 1px $black;
+  padding-left: 50px;
+  border: 0;
+
+  text-align: left;
 
   background-color: transparent;
   cursor: pointer;
@@ -63,10 +75,43 @@ export default defineComponent({
   }
 }
 
-.isSelected {
-  color: $white;
+.dot {
+  position: absolute;
+  top: 11px;
+  left: 0;
 
-  background-color: $black;
+  width: 30px;
+  height: 30px;
+  border: solid 1px $black;
+  border-radius: 16px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+
+    background-color: $black;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    transition-duration: 0.3s;
+
+    transition-property: width, height, opacity;
+
+    content: '';
+  }
 }
 
+.isSelected {
+  .dot::before {
+    width: 18px;
+    height: 18px;
+
+    opacity: 1;
+  }
+}
 </style>
