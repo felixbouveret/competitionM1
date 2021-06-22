@@ -1,5 +1,6 @@
 <template>
   <Hero />
+  <Header />
   <Chief />
   <Section />
   <Sectiondouble />
@@ -15,6 +16,7 @@
 import { defineComponent } from 'vue'
 import { Hero, Chief,Section, Sectiondouble, Sectiondoubled, Sectionquatre, Bfmbanner, UneHistoire, NewsLetter } from './components'
 import Footer from '@/components/Footer/Footer.vue'
+import Header from '@/components/Header/Header.vue'
 
 export default defineComponent({
   name: 'HomePage',
@@ -30,6 +32,7 @@ export default defineComponent({
     UneHistoire,
     NewsLetter,
     Footer,
+    Header
   },
 })
 </script>
