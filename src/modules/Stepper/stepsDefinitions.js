@@ -6,10 +6,26 @@ export default {
   },
   RegimeStep: {
     component: defineAsyncComponent(() => import('./components/_Steps/RegimeStep')),
-    hasNavigation: true
+    hasNavigation: true,
+    progression: {
+      current: 1,
+      max: 6
+    }
   },
-  RegimeStep2: {
-    component: defineAsyncComponent(() => import('./components/_Steps/RegimeStep2')),
-    hasNavigation: true
+  MangerCKoiStep: {
+    component: defineAsyncComponent(() => import('./components/_Steps/MangerCKoiStep')),
+    hasNavigation: true,
+    progression: {
+      current: 2,
+      max: 6
+    }
+  },
+  TuEsQuiStep: {
+    component: defineAsyncComponent(() => import('./components/_Steps/TuEsQuiStep')),
+    hasNavigation: true,
+    progression: {
+      current: 3,
+      max: 6
+    }
   }
 }

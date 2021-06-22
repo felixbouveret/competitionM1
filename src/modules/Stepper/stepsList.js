@@ -1,5 +1,6 @@
 export default [
   'WelcomeStep',
   'RegimeStep',
-  'RegimeStep2',
+  'MangerCKoiStep',
+  'TuEsQuiStep',
 ]
