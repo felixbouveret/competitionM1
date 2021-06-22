@@ -100,6 +100,7 @@ export default defineComponent({
 
     color: $cactus;
     text-transform: uppercase;
+    text-decoration: none;
 
     &::before {
       position: absolute;
