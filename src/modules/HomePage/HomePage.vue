@@ -64,7 +64,7 @@ export default defineComponent({
   margin-bottom: -84px;
 
   @media only screen and (min-width: 800px) {
-    margin-bottom: -100px;
+    margin-bottom: -90px;
   }
 }
 </style>

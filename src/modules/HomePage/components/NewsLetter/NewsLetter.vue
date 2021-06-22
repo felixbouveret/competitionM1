@@ -21,24 +21,32 @@
         </Button>
       </form>
     </Wrapper>
+    <Divider
+      is-top
+      is-small
+    />
   </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Button from '@/components/Button/Button.vue'
+import Divider  from '@/components/Divider/Divider.vue'
 
 export default defineComponent({
   name: 'NewsLetter',
 
   components: {
-    Button
+    Button,
+    Divider
   }
 })
 </script>
 
 <style lang="scss" module>
 .container {
+  position: relative;
+
   padding: 94px 24px 50px;
 
   background-image: linear-gradient(0deg, rgba(29, 29, 29, 0.3), rgba(29, 29, 29, 0.3)), url('./assets/background.png');
@@ -97,11 +105,6 @@ export default defineComponent({
   padding-bottom: 6px;
 
   font-size: 12px;
-
-  @media only screen and (min-width: 720px) {
-    position: relative;
-    right: 37px;
-  }
 }
 
 .input {

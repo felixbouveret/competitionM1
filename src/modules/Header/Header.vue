@@ -78,6 +78,10 @@ export default defineComponent({
   padding: 24px;
 
   background-color: $white;
+
+  @media only screen and (min-width: 800px) {
+    height: 90px;
+  }
 }
 
 .inner {

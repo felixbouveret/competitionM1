@@ -52,12 +52,14 @@
         </div>
       </div>
     </Wrapper>
+    <Divider />
   </section>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent, reactive, computed } from 'vue'
 
+import Divider from "@/components/Divider/Divider.vue"
 import Button from "@/components/Button/Button.vue"
 import SideNav from "@/components/SideNav/SideNav.vue"
 import arrowLeft from "@/assets/icons/arrow-left.svg"
@@ -70,6 +72,7 @@ export default defineComponent({
 
   components: {
     Button,
+    Divider,
     SideNav
   },
 

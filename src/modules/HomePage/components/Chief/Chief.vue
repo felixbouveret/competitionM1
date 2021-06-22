@@ -25,12 +25,22 @@
         :active-slide="activeSlide"
       />
     </Wrapper>
+    <Divider
+      is-top
+      has-head
+      is-green
+    />
+    <Divider
+      has-head
+      is-green
+    />
   </section>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent, reactive } from 'vue'
 
+import Divider from "@/components/Divider/Divider.vue"
 import ChiefNav from '../ChiefNav'
 import ChiefItem from '../ChiefItem'
 import SLIDES from './SLIDES'
@@ -40,7 +50,8 @@ export default defineComponent({
 
   components: {
     ChiefNav,
-    ChiefItem
+    ChiefItem,
+    Divider
   },
 
   setup: () => {

@@ -24,11 +24,17 @@
         </div>
       </div>
     </Wrapper>
+    <Divider
+      has-head
+      is-green
+      is-small
+    />
   </section>
 </template>
 
 <script lang="ts">
 import {defineComponent} from 'vue'
+import Divider  from '@/components/Divider/Divider.vue'
 import Button  from '@/components/Button/Button.vue';
 import Persil from "../../assets/persilromain.png"
 
@@ -37,6 +43,7 @@ export default defineComponent({
 
   components: {
     Button,
+    Divider
   },
 
   setup() {
@@ -49,6 +56,7 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
+  position: relative;
 
   background-color: $cream;
 

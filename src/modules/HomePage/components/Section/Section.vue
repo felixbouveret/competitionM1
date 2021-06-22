@@ -1,27 +1,36 @@
 <template>
   <section :class="$style.sectiongreen">
-    <Wrapper :class="$style.wrappercustomsection">
-      <h3 :class="$style.sectiongreenh3">
-        VOTRE MENU<br> DE La SEMAINE
-      </h3>
-      <p :class="$style.sectiongreentext">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown.
-      </p>
-      <Button
-        is-light
-        :class="$style.sectiongreenbtn"
-      >
-        EN SAVOIR PLUS
-      </Button>
-    </Wrapper>
-    <img :class="$style.imagefit" :src="Carousel">
+    <div :class="$style.container">
+      <Wrapper :class="$style.wrappercustomsection">
+        <h3 :class="$style.sectiongreenh3">
+          VOTRE MENU<br> DE La SEMAINE
+        </h3>
+        <p :class="$style.sectiongreentext">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown.
+        </p>
+        <Button
+          is-light
+          :class="$style.sectiongreenbtn"
+        >
+          EN SAVOIR PLUS
+        </Button>
+      </Wrapper>
+    </div>
+    <img
+      :class="$style.imagefit"
+      :src="Carousel"
+    >
+    <Divider
+      is-top
+    />
   </section>
 </template>
 
 <script lang="ts">
 import {defineComponent} from 'vue'
+import Divider  from '@/components/Divider/Divider.vue'
 import Button  from '@/components/Button/Button.vue'
 import Carousel from "../../assets/carousel.png"
 
@@ -30,6 +39,7 @@ export default defineComponent({
 
   components: {
     Button,
+    Divider
   },
   setup(){
     return{Carousel}
@@ -44,15 +54,18 @@ export default defineComponent({
   max-height: 496px;
   margin-top: 147px;
   margin-bottom: 54px;
-  margin-left: -20px;
 }
 
 .sectiongreen {
-  width: 100vw;
+  position: relative;
+
   min-height: 100vh;
-  padding: 120px 20px 20px 20px;
 
   background-color: #20332b;
+}
+
+.container {
+  padding: 220px 20px 20px 20px;
 }
 
 .wrappercustomsection {
@@ -91,7 +104,6 @@ export default defineComponent({
     height: 360px;
     margin-top: 44px;
     margin-bottom: 24px;
-    margin-left: -20px;
     object-fit: cover;
   }
 }
