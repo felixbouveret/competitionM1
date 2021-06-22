@@ -156,47 +156,4 @@ export default defineComponent({
     margin: 0;
   }
 }
-
-// @media only screen and (max-width: 720px) {
-//   .content {
-//     position: inherit;
-//     bottom: 0;
-
-//     float: inherit;
-
-//     width: 100%;
-//     height: 440px;
-//     padding-right: 20px;
-//     padding-bottom: 30px;
-//     padding-left: 20px;
-//     border-bottom: 2px solid #20332b;
-
-//     & > div {
-//       position: inherit;
-//       bottom: 40px;
-
-//       width: 100%;
-//     }
-//   }
-
-//   .view {
-//     float: none;
-
-//     & > img {
-//       float: none;
-//       width: 100vw;
-//     }
-//   }
-
-//   .inner {
-//     height: fit-content;
-//     padding: 0%;
-//   }
-
-//   .container {
-//     height: auto;
-
-//     background-color: #f4eee7;
-//   }
-// }
 </style>
