@@ -1,20 +1,20 @@
 <template>
   <section :class="$style.container">
+    <Header @go-back="goBack()" />
     <transition name="fade-in">
       <components 
-        :is="currentStep.component" 
+        :is="currentStep.component"
+        :class="$style.steps" 
         :progression="progression"
         @next-step="onNextStep()"
       />
     </transition>
     <SubmitButton
       v-if="currentStep.hasNavigation"
+      :class="$style.nav"
       :progression="progression"
       @submit-button="onNextStep()"
     />
-    <button @click="goBack()">
-      Back
-    </button>
   </section>
 </template>
 
@@ -23,11 +23,12 @@ import { computed, defineComponent, ref, } from "vue";
 import StepsList from './stepsList'
 import StepDefinitions from './stepsDefinitions'
 import SubmitButton from "./components/SubmitButton/SubmitButton.vue";
+import Header from "./components/Header/Header.vue";
 
 export default defineComponent({
   name: "Stepper",
 
-  components: { SubmitButton },
+  components: { SubmitButton, Header },
 
   setup() {
     const currentStepIndex = ref(0);
@@ -60,10 +61,19 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
+  overflow-y: hidden;
 
   background-color: $cream;
 }
+
+.steps {
+  flex-grow: 1;
+}
+
 </style>
 <style>
 .fade-in-enter-active {
