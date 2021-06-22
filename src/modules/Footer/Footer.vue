@@ -84,6 +84,7 @@ export default defineComponent({
 
   @media only screen and (min-width: 720px) {
     width: auto;
+    margin: 0;
   }
 }
 
