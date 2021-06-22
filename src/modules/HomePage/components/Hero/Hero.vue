@@ -168,7 +168,7 @@ export default defineComponent({
 
     margin-top: 19px;
 
-    @media (min-width: 720px) {
+    @media only screen and (min-width: 720px) {
       margin-top: 4px;
 
       @include typo-mega-title;
@@ -184,7 +184,7 @@ export default defineComponent({
   .controlsContainer {
     align-self: flex-end;
 
-    @media (min-width: 720px) {
+    @media only screen and (min-width: 720px) {
       align-self: flex-start;
     }
   }
@@ -204,7 +204,7 @@ export default defineComponent({
       display: block;
     }
 
-    @media (min-width: 720px) {
+    @media only screen and (min-width: 720px) {
       margin-bottom: 64px;
     }
   }

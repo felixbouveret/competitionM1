@@ -159,7 +159,7 @@ export default defineComponent({
   }
 }
 
-@media (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   .bfmul {
     padding: 0;
   }

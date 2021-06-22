@@ -104,7 +104,7 @@ export default defineComponent({
   text-transform: uppercase;
 }
 
-@media (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   .histoiredroite {
     position: inherit;
     bottom: 0;

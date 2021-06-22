@@ -31,7 +31,6 @@
 <script lang="ts">
 import { ref, defineComponent, reactive } from 'vue'
 
-import Button from "@/components/Button/Button.vue"
 import ChiefNav from '../ChiefNav'
 import ChiefItem from '../ChiefItem'
 import SLIDES from './SLIDES'
@@ -40,7 +39,6 @@ export default defineComponent({
   name: 'ChiefSection',
 
   components: {
-    Button,
     ChiefNav,
     ChiefItem
   },
@@ -65,7 +63,7 @@ export default defineComponent({
 
   background-color: $cream;
 
-  @media (min-width: 720px) {
+  @media only screen and (min-width: 720px) {
     padding: 148px 24px;
   }
 }
@@ -92,16 +90,18 @@ export default defineComponent({
   color: $mustard;
   font-size: 10px;
 
-  @media (min-width: 720px) {
+  @media only screen and (min-width: 720px) {
     @include typo-headline;
   }
 }
 
 .title {
+  max-width: 900px;
+
   @include typo-title;
   color: $cactus;
 
-  @media (min-width: 720px) {
+  @media only screen and (min-width: 720px) {
     @include typo-mega-title;
   }
 }
@@ -116,7 +116,7 @@ export default defineComponent({
 .nav {
   margin-top: 48px;
 
-  @media (min-width: 720px) {
+  @media only screen and (min-width: 720px) {
     margin-top: 80px;
   }
 }

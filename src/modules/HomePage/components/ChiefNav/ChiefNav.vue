@@ -74,7 +74,7 @@ export default defineComponent({
   border-bottom: solid 1px #cbcbcbcb;
   overflow-x: scroll;
 
-  @media (min-width: 720px) {
+  @media only screen and (min-width: 720px) {
     justify-content: space-around;
     padding: 0;
   }
@@ -94,7 +94,7 @@ export default defineComponent({
 
   @include typo-body;
 
-  @media (min-width: 720px) {
+  @media only screen and (min-width: 720px) {
     padding: 24px;
 
     @include typo-headline;

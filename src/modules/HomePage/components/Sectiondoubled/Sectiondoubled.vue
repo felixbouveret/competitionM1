@@ -108,7 +108,7 @@ export default defineComponent({
   height: 100vh;
 }
 
-@media (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   .sectiondroiteint {
     width: 100vw;
 
