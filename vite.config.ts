@@ -7,6 +7,32 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [
     vue(),
+      VitePWA({
+        manifest: {
+          "name": "pwa",
+          "short_name": "pwa",
+          "icons": [
+            {
+              "src": "/img/icons/android-chrome-192x192.png",
+              "sizes": "192x192",
+              "type": "image/png"
+            },
+            {
+              "src": "/img/icons/android-chrome-512x512.png",
+              "sizes": "512x512",
+              "type": "image/png"
+            }
+          ],
+          "start_url": "/index.html",
+          "display": "standalone",
+          "background_color": "#000000",
+          "theme_color": "#4DBA87"
+        },
+        workbox: {
+          // workbox options for generateSW
+        }
+      })
+    
   ],
 
   resolve: {
