@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.container">
+  <div>
     <p :class="$style.text">
       {{ `${progression.current} sur ${progression.max}` }}
     </p>
