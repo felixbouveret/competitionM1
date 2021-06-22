@@ -108,6 +108,7 @@ export default defineComponent({
 
   .imagegauche {
     width: 100vw;
+    height: auto;
   }
 
   .sectiongaucheintint {

@@ -123,6 +123,7 @@ export default defineComponent({
   .imagedroitehidden {
     display: block;
     width: 100vw;
+    height: auto;
   }
 
   .imagedroite {
