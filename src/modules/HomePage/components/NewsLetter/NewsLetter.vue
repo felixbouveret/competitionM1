@@ -97,6 +97,11 @@ export default defineComponent({
   padding-bottom: 6px;
 
   font-size: 12px;
+
+  @media only screen and (min-width: 720px) {
+    position: relative;
+    right: 37px;
+  }
 }
 
 .input {
