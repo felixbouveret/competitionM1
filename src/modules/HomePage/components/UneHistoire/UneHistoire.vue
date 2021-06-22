@@ -12,10 +12,7 @@
           </h3>
           <div :class="$style.desc">
             <p>
-              1 heure, c’est le temps moyen que vous passez en cuisine
-              quotidiennement. Ne réfléchissez plus à vos repas et gagnez du temps
-              sur vos courses, votre cuisine et la vaisselle grâce à Persil &
-              Romarin.
+              Partenaires professionnels depuis bien des années, la solide amitée entre Mayana et Mathieu ont souhaité mettre l’humain au coeur de Persil & Romarin.
             </p>
             <Button :class="$style.button">
               En savoir plus
@@ -76,8 +73,13 @@ export default defineComponent({
 .inner {
   @media only screen and (min-width: 720px) {
     display: flex;
+    gap: 32px;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    gap: 64px;
   }
 }
 
@@ -104,6 +106,7 @@ export default defineComponent({
 
   @media only screen and (min-width: 1200px) {
     align-self: flex-end;
+    width: 100%;
     height: 100%;
     padding-bottom: 0;
   }
@@ -120,7 +123,6 @@ export default defineComponent({
   padding-bottom: 30px;
 
   @media only screen and (min-width: 1200px) {
-    max-width: 350px;
     margin-left: 80px;
     border-bottom: 1px $black solid;
   }
@@ -142,6 +144,7 @@ export default defineComponent({
   border-bottom: 1px $black solid;
 
   @media only screen and (min-width: 1200px) {
+    max-width: 350px;
     margin: 0;
     margin-top: 64px;
     border-bottom: 0;
@@ -160,7 +163,7 @@ export default defineComponent({
   font-size: 12px !important;
 
   @media only screen and (min-width: 1200px) {
-    max-width: none;
+    max-width: 350px;
     margin: 0;
   }
 }

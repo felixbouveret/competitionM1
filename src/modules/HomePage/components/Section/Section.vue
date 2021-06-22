@@ -6,9 +6,7 @@
           VOTRE MENU<br> DE La SEMAINE
         </h3>
         <p :class="$style.sectiongreentext">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown.
+          Toutes les semaine nos chefs vous proposent 15 nouveaux plats. Des recettes de saison spécialement créées pour votre palais, votre ventre et la planète.
         </p>
         <Button
           is-light
