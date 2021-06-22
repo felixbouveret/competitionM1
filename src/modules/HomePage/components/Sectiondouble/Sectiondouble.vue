@@ -73,7 +73,10 @@ export default defineComponent({
   @include typo-big-title;
 
   color: #175b06;
-  font-size: 46px;
+
+  font-size: 27px;
+  line-height: 45px;
+
   text-align: left;
   text-transform: uppercase;
 }
@@ -104,6 +107,7 @@ export default defineComponent({
 @media (max-width: 720px) {
   .sectiongaucheint {
     width: 100vw;
+    padding: 30px;
   }
 
   .imagegauche {

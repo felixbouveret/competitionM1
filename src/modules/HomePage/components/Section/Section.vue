@@ -36,7 +36,7 @@ export default defineComponent({
 .sectiongreen {
   width: 100vw;
   height: 100vh;
-  padding-top: 120px;
+  padding: 120px 20px 20px 20px;
 
   background-color: #20332b;
 }

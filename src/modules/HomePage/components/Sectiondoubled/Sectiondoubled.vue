@@ -111,13 +111,15 @@ export default defineComponent({
 @media (max-width: 720px) {
   .sectiondroiteint {
     width: 100vw;
+    padding: 30px;
 
     background-color: #f4eee7;
   }
 
   .h3left {
-    font-size: 30px;
-    line-height: 50px;
+
+    font-size: 27px;
+    line-height: 45px;
   }
 
   .imagedroitehidden {
