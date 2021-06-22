@@ -74,7 +74,7 @@ export default defineComponent({
 
   color: #175b06;
 
-  font-size: 27px;
+  font-size: 46px;
   line-height: 45px;
 
   text-align: left;

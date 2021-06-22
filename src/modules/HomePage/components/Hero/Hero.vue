@@ -172,6 +172,7 @@ export default defineComponent({
       margin-top: 4px;
 
       @include typo-mega-title;
+      line-height: 100px;
     }
   }
 

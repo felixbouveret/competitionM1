@@ -15,8 +15,8 @@
       >
         EN SAVOIR PLUS
       </Button>
-      <img :class="$style.imagefit" :src="Carousel">
     </Wrapper>
+    <img :class="$style.imagefit" :src="Carousel">
   </section>
 </template>
 
@@ -40,9 +40,10 @@ export default defineComponent({
 <style lang="scss" module>
 
 .imagefit {
-  width: 100vw;
-  margin-top: 44px;
-  margin-bottom: 24px;
+  min-width: 100vw;
+  max-height: 496px;
+  margin-top: 147px;
+  margin-bottom: 54px;
   margin-left: -20px;
 }
 
