@@ -7,12 +7,13 @@
   <Sectionquatre />
   <Bfmbanner />
   <UneHistoire />
+  <NewsLetter />
   <Footer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Hero, Chief,Section, Sectiondouble, Sectiondoubled, Sectionquatre, Bfmbanner, UneHistoire } from './components'
+import { Hero, Chief,Section, Sectiondouble, Sectiondoubled, Sectionquatre, Bfmbanner, UneHistoire, NewsLetter } from './components'
 import Footer from '@/components/Footer/Footer.vue'
 
 export default defineComponent({
@@ -27,6 +28,7 @@ export default defineComponent({
     Sectionquatre,
     Bfmbanner,
     UneHistoire,
+    NewsLetter,
     Footer,
   },
 })
