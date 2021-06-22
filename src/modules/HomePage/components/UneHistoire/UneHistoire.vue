@@ -110,9 +110,12 @@ export default defineComponent({
     bottom: 0;
 
     float: inherit;
+
     width: 100%;
-    height: 360px;
+    height: 440px;
+    padding-right: 20px;
     padding-bottom: 30px;
+    padding-left: 20px;
     border-bottom: 2px solid #20332b;
 
     & > div {
