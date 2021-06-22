@@ -67,7 +67,7 @@ export default defineComponent({
   margin-top: 35px;
 }
 
-@media (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   .sectiongreenh3 {
     font-size: 40px;
   }

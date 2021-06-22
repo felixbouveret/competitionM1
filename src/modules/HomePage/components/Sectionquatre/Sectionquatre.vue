@@ -41,7 +41,7 @@ export default defineComponent({
   text-align: center;
 }
 
-@media (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   .sectiongreen {
     display: flex;
     height: 100vh;

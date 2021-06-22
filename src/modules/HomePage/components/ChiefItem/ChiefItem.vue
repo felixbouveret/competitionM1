@@ -140,7 +140,7 @@ export default defineComponent({
 
   color: $cactus;
 
-  @media (min-width: 800) {
+  @media only screen and (min-width: 800) {
     @include typo-big-title;
   }
 }
@@ -150,7 +150,7 @@ export default defineComponent({
   flex-direction: column;
   gap: 32px;
 
-  @media (min-width: 1120px) {
+  @media only screen and (min-width: 1120px) {
     flex-direction: row;
     gap: 54px;
   }
@@ -175,7 +175,7 @@ export default defineComponent({
 
   display: none;
 
-  @media (min-width: 800px) {
+  @media only screen and (min-width: 800px) {
     display: block;
     flex-shrink: 1;
 
