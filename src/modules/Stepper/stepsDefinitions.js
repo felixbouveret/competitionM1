@@ -2,7 +2,8 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   WelcomeStep: {
-    component: defineAsyncComponent(() => import('./components/_Steps/WelcomeStep'))
+    component: defineAsyncComponent(() => import('./components/_Steps/WelcomeStep')),
+    isTransparent: true
   },
   RegimeStep: {
     component: defineAsyncComponent(() => import('./components/_Steps/RegimeStep')),

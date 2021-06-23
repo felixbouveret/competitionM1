@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.container">
+  <div :class="[$style.container,{[$style.isTransparent]:isTransparent}]">
     <Wrapper>
       <button
         @click="$emit('go-back')"
@@ -8,7 +8,7 @@
       </button>
       <img
         :class="$style.logo"
-        :src="Logo"
+        :src="isTransparent ? Logo : LogoCactus"
         alt=""
       >
     </Wrapper>
@@ -16,20 +16,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType  } from "vue";
-import Logo from '@/assets/logo-cactus.svg'
+import { defineComponent } from "vue";
+import LogoCactus from '@/assets/logo-cactus.svg'
+import Logo from '@/assets/logo.svg'
 
 export default defineComponent({
-  name: "Progression",
+  name: "Header",
   props: {
-    progression: {
-      type: Object as PropType<any>,
-      default: (): any => ({})
+    isTransparent: {
+      type: Boolean,
+      default: false
     },
   },
   emits: ["go-back"],
   setup() {
     return {
+      LogoCactus,
       Logo
     };
   },
@@ -42,6 +44,19 @@ export default defineComponent({
 
   padding: 20px;
   border-bottom: 1px solid $cactus;
+}
+
+.isTransparent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  width: 100%;
+  border-bottom-color: $white;
+
+  background-color: rgba($color: $white, $alpha: 0.5);
+  backdrop-filter: blur(8px);
 }
 
 .logo {

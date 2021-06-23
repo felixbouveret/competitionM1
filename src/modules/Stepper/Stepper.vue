@@ -1,6 +1,9 @@
 <template>
   <section :class="$style.container">
-    <Header @go-back="goBack()" />
+    <Header
+      :is-transparent="currentStep.isTransparent"
+      @go-back="goBack()"
+    />
     <transition name="fade-in">
       <components 
         :is="currentStep.component"
@@ -24,6 +27,7 @@ import StepsList from './stepsList'
 import StepDefinitions from './stepsDefinitions'
 import SubmitButton from "./components/SubmitButton/SubmitButton.vue";
 import Header from "./components/Header/Header.vue";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "Stepper",
@@ -31,6 +35,7 @@ export default defineComponent({
   components: { SubmitButton, Header },
 
   setup() {
+    const router = useRouter()
     const currentStepIndex = ref(0);
     const activeStepName = computed(() => StepsList[currentStepIndex.value]);
     const currentStep = computed(() => StepDefinitions[activeStepName.value]);
@@ -41,6 +46,9 @@ export default defineComponent({
       currentStepIndex.value++;
     };
     const goBack = () => {
+      if (!currentStepIndex.value) {
+        router.push('/')
+      }
       selectedValue.value = null
       currentStepIndex.value--;
     };

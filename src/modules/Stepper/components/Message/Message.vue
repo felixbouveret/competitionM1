@@ -40,7 +40,7 @@ export default defineComponent({
 }
 
 .title {
-  @include typo-body;
+  @include typo-headline;
   color: $cactus;
   text-transform: uppercase;
 }
