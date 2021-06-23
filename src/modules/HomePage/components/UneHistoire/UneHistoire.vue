@@ -64,7 +64,6 @@ export default defineComponent({
   }
 
   @media only screen and (min-width: 1200px) {
-    height: 100vh;
     min-height: 720px;
     max-height: 1200px;
   }
