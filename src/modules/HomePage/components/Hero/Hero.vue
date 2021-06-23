@@ -104,7 +104,7 @@ export default defineComponent({
     } 
 
     onMounted(() => {
-      setInterval(increment, 5000)
+      setInterval(increment, 8000)
     })
 
     return { 
