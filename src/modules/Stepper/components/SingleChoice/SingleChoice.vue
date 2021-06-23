@@ -66,13 +66,17 @@ export default defineComponent({
   @include typo-body;
 
   &:not(:first-child) {
-    margin-top: 32px;
+    margin-top: 16px;
   }
 
   @media only screen and (min-width: 720px) {
     padding: 19px 41px;
 
     text-align: left;
+
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
   }
 }
 
