@@ -5,15 +5,17 @@
         :is-transparent="currentStep.isTransparent"
         @go-back="goBack()"
       />
-      <transition name="fade-in">
-        <components 
-          :is="currentStep.component"
-          :class="$style.steps" 
-          :progression="progression"
-          @next-step="onNextStep()"
-          @on-select="selectedValue = $event"
-        />
-      </transition>
+      <div :class="$style.stepsContainer">
+        <transition name="fade-in">
+          <components 
+            :is="currentStep.component"
+            :class="$style.steps" 
+            :progression="progression"
+            @next-step="onNextStep()"
+            @on-select="selectedValue = $event"
+          />
+        </transition>
+      </div>
       <SubmitButton
         v-if="currentStep.hasNavigation"
         :progression="progression"
@@ -106,12 +108,13 @@ export default defineComponent({
   overflow-y: hidden;
 }
 
-.steps {
+.stepsContainer {
+  height: 100%;
   overflow-y: auto;
 }
 
 .hasSide {
-  .steps {
+  .stepsContainer {
     max-width: 630px;
   }
 }

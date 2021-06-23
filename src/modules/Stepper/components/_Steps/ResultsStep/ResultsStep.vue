@@ -36,12 +36,28 @@
               {{ name }}
             </p>
             <span :class="$style.ratedesk">
-            <img :src="starIcon" alt="">
-            <img :src="starIcon" alt="">
-            <img :src="starIcon" alt="">
-            <img :src="starIcon" alt="">
-            <img :src="starIcon" :class="$style.blackone" alt="">
-          </span>
+              <img
+                :src="starIcon"
+                alt=""
+              >
+              <img
+                :src="starIcon"
+                alt=""
+              >
+              <img
+                :src="starIcon"
+                alt=""
+              >
+              <img
+                :src="starIcon"
+                alt=""
+              >
+              <img
+                :src="starIcon"
+                :class="$style.blackone"
+                alt=""
+              >
+            </span>
             <p :class="$style.type">
               {{ type }}
             </p>
@@ -69,10 +85,22 @@
     </Carousel>
     <div :class="$style.buttons">
       <button @click="decrement">
-        Précédent
+        <span> 
+          Précédent
+        </span>
+        <img
+          :src="arrowLeftIcon"
+          alt=""
+        >
       </button>
       <button @click="increment">
-        Suivant
+        <span>
+          Suivant
+        </span>
+        <img
+          :src="arrowRightIcon"
+          alt=""
+        >
       </button>
     </div>
   </div>
@@ -80,6 +108,8 @@
 
 <script lang="ts">
 import starIcon from '@/assets/icons/star.svg'
+import arrowLeftIcon from '@/assets/icons/circular-arrow-left-cactus.svg'
+import arrowRightIcon from '@/assets/icons/circular-arrow-right-cactus.svg'
 import Button from '@/components/Button/Button.vue'
 import 'vue3-carousel/dist/carousel.css';
 import { defineComponent, ref } from "vue";
@@ -123,7 +153,9 @@ export default defineComponent({
       seletectedValue,
       count,
       starIcon,
-      ctaText
+      ctaText,
+      arrowLeftIcon,
+      arrowRightIcon
     };
   },
 });
@@ -149,6 +181,11 @@ export default defineComponent({
 
   & > div > ol {
     height: 70vh;
+  }
+
+  @media only screen and (min-width: 720px) {
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
 
@@ -187,6 +224,7 @@ export default defineComponent({
 
 .img {
   width: 100%;
+  border-radius: 12px;
 
   @media only screen and (min-width: 720px) {
     object-fit: cover;
@@ -295,6 +333,28 @@ export default defineComponent({
     border: 0;
 
     background-color: transparent;
+
+    img {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 720px) {
+    left: 50%;
+
+    width: 60%;
+
+    transform: translateY(calc(-50% - 11px)) translateX(-50%);
+
+    button {
+      span {
+        display: none;
+      }
+
+      img {
+        display: block;
+      }
+    }
   }
 }
 
@@ -317,5 +377,9 @@ export default defineComponent({
     &.carousel__pagination-button--active {
       background-color: $black;
     }
+  }
+
+  .carousel__viewport {
+    overflow: visible;
   }
 </style>
