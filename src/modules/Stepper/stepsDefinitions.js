@@ -54,5 +54,8 @@ export default {
   },
   EmailStep: {
     component: defineAsyncComponent(() => import('./components/_Steps/EmailStep')),
+  },
+  ResultsStep: {
+    component: defineAsyncComponent(() => import('./components/_Steps/ResultsStep')),
   }
 }

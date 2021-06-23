@@ -5738,6 +5738,11 @@ vue-tsc@^0.0.24:
   dependencies:
     unzipper "0.10.11"
 
+vue3-carousel@^0.1.23:
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/vue3-carousel/-/vue3-carousel-0.1.23.tgz#f3659b3d029150c0b05341b805f7b35afedc67e5"
+  integrity sha512-fsvE/Nih5A+wJNUoNSr8FDul8Ar2Ukw0rRN+gy1z8e+KTjlBZGQ3COHlHBwWIljGbKFWs+068sBuo/KWNFUWaA==
+
 vue@^3.0.5:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.1.1.tgz#9ad655758a0fa6c0dee5b3d2431d3912a9b381aa"

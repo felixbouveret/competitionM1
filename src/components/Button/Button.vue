@@ -6,6 +6,7 @@
       $style.button, 
       {[$style.isLight]: isLight},
       {[$style.isWired]: isWired},
+      {[$style.isGreen]: isGreen},
     ]"
   >
     <slot />
@@ -15,7 +16,8 @@
     :class="[
       $style.button, 
       {[$style.isLight]: isLight},
-      {[$style.isWired]: isWired}
+      {[$style.isWired]: isWired},
+      {[$style.isGreen]: isGreen},
     ]"
     @click="()=>$emit('on-click')"
   >
@@ -39,6 +41,10 @@ export default defineComponent({
       default: false
     },
     isWired: {
+      type: Boolean,
+      default: false
+    },
+    isGreen: {
       type: Boolean,
       default: false
     }
@@ -69,13 +75,22 @@ export default defineComponent({
   }
 
   .isWired {
-
     padding: 14px 35px 14px 35px;
     border: solid 1px $black;
 
     color: $black;
 
     background-color: transparent;
+
+    @include typo-body;
+  }
+
+  .isGreen {
+    padding: 10px 35px 10px 35px;
+
+    color: $white;
+
+    background-color: $cactus;
 
     @include typo-body;
   }
