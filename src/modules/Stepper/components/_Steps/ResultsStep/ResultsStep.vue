@@ -13,7 +13,7 @@
       wrap-around
     >
       <Slide
-        v-for="({name, type, desc, rate, img}, index) in results"
+        v-for="({name, type, desc, desk, rate, img}, index) in results"
         :key="index.toString()"
       >
         <div 
@@ -35,12 +35,25 @@
             <p :class="$style.name">
               {{ name }}
             </p>
+            <span :class="$style.ratedesk">
+            <img :src="starIcon" alt="">
+            <img :src="starIcon" alt="">
+            <img :src="starIcon" alt="">
+            <img :src="starIcon" alt="">
+            <img :src="starIcon" :class="$style.blackone" alt="">
+          </span>
             <p :class="$style.type">
               {{ type }}
             </p>
             <p :class="$style.desc">
               {{ desc }}
             </p>
+            <p :class="$style.desk">
+              {{ desk }}
+            </p>
+            <a :class="$style.lire">
+              Lire plus
+            </a>
             <Button
               is-green
               :class="$style.button"
@@ -127,11 +140,16 @@ export default defineComponent({
 .title {
   @include typo-title;
   color: $cactus;
+
   text-align: center;
 }
 
 .carousel {
   margin-top: 24px;
+
+  & > div > ol {
+    height: 70vh;
+  }
 }
 
 .slide {
@@ -143,10 +161,52 @@ export default defineComponent({
 
   background-color: $white;
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.08);
+
+  @media only screen and (min-width: 720px) {
+    display: flex;
+  }
+}
+
+.lire {
+  display: none;
+
+  @media only screen and (min-width: 720px) {
+    display: block;
+    margin-top: 30px;
+
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .img {
   width: 100%;
+
+  @media only screen and (min-width: 720px) {
+    object-fit: cover;
+  }
+}
+
+.ratedesk {
+  display: none;
+
+  @media only screen and (min-width: 720px) {
+    display: block;
+    margin-top: 30px;
+
+    text-align: left;
+
+    & > img {
+      height: 25px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .rate {
@@ -158,6 +218,10 @@ export default defineComponent({
   border-radius: 4px;
 
   background-color: $white;
+
+  @media only screen and (min-width: 720px) {
+    display: none;
+  }
 }
 
 .content {
@@ -168,6 +232,11 @@ export default defineComponent({
   @include typo-headline;
   color: $cactus;
   text-transform: uppercase;
+
+  @media only screen and (min-width: 720px) {
+    font-size: 30px;
+    text-align: left;
+  }
 }
 
 .type {
@@ -175,11 +244,35 @@ export default defineComponent({
   margin-top: 8px;
 
   font-weight: 500;
+
+  @media only screen and (min-width: 720px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    font-style: italic;
+
+    text-align: left;
+  }
 }
 
 .desc {
   @include typo-body;
   margin-top: 24px;
+
+  @media only screen and (min-width: 720px) {
+    display: none;
+  }
+}
+
+.desk {
+  @include typo-body;
+  display: none;
+
+  @media only screen and (min-width: 720px) {
+    display: block;
+
+    text-align: left;
+  }
 }
 
 .pagination {
