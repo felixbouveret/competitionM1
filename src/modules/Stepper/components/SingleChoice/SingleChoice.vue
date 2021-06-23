@@ -48,6 +48,10 @@ export default defineComponent({
 <style lang="scss" module>
 .container {
   margin-top: 54px;
+
+  @media only screen and (min-width: 720px) {
+    margin-left: 40px;
+  }
 }
 
 .button {

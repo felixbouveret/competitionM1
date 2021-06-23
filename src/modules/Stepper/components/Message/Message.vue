@@ -48,6 +48,15 @@ export default defineComponent({
 .question {
   @include typo-body;
   margin-top: 24px;
+
+  @media only screen and (min-width: 720px) {
+    margin-top: 24px;
+
+    font-weight: 600;
+    font-size: 30px;
+    font-family: "Karla", Courier, monospace;
+    line-height: 38px;
+  }
 }
 
 </style>

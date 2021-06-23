@@ -91,6 +91,12 @@ export default defineComponent({
   }
 }
 
+@media (min-width: 720px) {
+  .hasSide > .inner {
+    padding: 40px;
+  }
+}
+
 .inner {
   display: flex;
   flex-direction: column;
@@ -109,6 +115,7 @@ export default defineComponent({
     max-width: 630px;
   }
 }
+
 </style>
 <style>
 .fade-in-enter-active {
@@ -124,4 +131,5 @@ export default defineComponent({
   transform: translateY(10px);
   opacity: 0;
 }
+
 </style>

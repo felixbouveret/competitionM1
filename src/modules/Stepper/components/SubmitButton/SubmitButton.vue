@@ -75,6 +75,10 @@ export default defineComponent({
   width: 100%;
   margin-top: 32px;
 
+  @media only screen and (min-width: 720px) {
+    margin-left: 40px;
+  }
+
   text-transform: none;
 
   @include typo-body;
