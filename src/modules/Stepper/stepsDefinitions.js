@@ -27,5 +27,29 @@ export default {
       current: 3,
       max: 6
     }
+  },
+  MatineeStep: {
+    component: defineAsyncComponent(() => import('./components/_Steps/MatineeStep')),
+    hasNavigation: true,
+    progression: {
+      current: 4,
+      max: 6
+    }
+  },
+  DestinationStep: {
+    component: defineAsyncComponent(() => import('./components/_Steps/DestinationStep')),
+    hasNavigation: true,
+    progression: {
+      current: 5,
+      max: 6
+    }
+  },
+  SavoirStep: {
+    component: defineAsyncComponent(() => import('./components/_Steps/SavoirStep')),
+    hasNavigation: true,
+    progression: {
+      current: 6,
+      max: 6
+    }
   }
 }

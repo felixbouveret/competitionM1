@@ -3,4 +3,7 @@ export default [
   'RegimeStep',
   'MangerCKoiStep',
   'TuEsQuiStep',
+  'MatineeStep',
+  'DestinationStep',
+  'SavoirStep'
 ]
