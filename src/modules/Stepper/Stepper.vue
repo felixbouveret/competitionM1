@@ -9,7 +9,6 @@
         <transition name="fade-in">
           <components 
             :is="currentStep.component"
-            :class="$style.steps" 
             :progression="progression"
             @next-step="onNextStep()"
             @on-select="selectedValue = $event"

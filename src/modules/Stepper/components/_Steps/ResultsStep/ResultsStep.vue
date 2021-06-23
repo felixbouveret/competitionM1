@@ -54,7 +54,6 @@
               >
               <img
                 :src="starIcon"
-                :class="$style.blackone"
                 alt=""
               >
             </span>
