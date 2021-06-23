@@ -7,12 +7,13 @@
         :class="$style.steps" 
         :progression="progression"
         @next-step="onNextStep()"
+        @on-select="selectedValue = $event"
       />
     </transition>
     <SubmitButton
       v-if="currentStep.hasNavigation"
       :progression="progression"
-      @submit-button="onNextStep()"
+      @submit-button="selectedValue ? onNextStep() : null"
     />
   </section>
 </template>
@@ -33,11 +34,14 @@ export default defineComponent({
     const currentStepIndex = ref(0);
     const activeStepName = computed(() => StepsList[currentStepIndex.value]);
     const currentStep = computed(() => StepDefinitions[activeStepName.value]);
+    const selectedValue = ref(null)
 
     const onNextStep = () => {
+      selectedValue.value = null
       currentStepIndex.value++;
     };
     const goBack = () => {
+      selectedValue.value = null
       currentStepIndex.value--;
     };
 
@@ -52,7 +56,8 @@ export default defineComponent({
       currentStep,
       currentStepIndex,
       activeStepName,
-      progression
+      progression,
+      selectedValue
     };
   },
 });

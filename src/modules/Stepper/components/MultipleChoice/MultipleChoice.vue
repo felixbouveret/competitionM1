@@ -25,7 +25,9 @@ export default defineComponent({
     },
   },
 
-  setup(props) {
+  emits: ['on-select'],
+
+  setup(props, {emit}) {
     const selectedOption = ref<any>([])
     const items = ref(props.items)
 
@@ -36,7 +38,9 @@ export default defineComponent({
       } else {
         selectedOption.value.push(option) 
       }
-    }
+      const returnedValue = selectedOption.value.length ? selectedOption.value : null
+      emit('on-select', returnedValue)
+    } 
     
     const isSelected = (id) => {  
       return selectedOption.value.includes(items.value[id].data)

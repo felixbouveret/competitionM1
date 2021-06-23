@@ -6,7 +6,7 @@
     />
     <SingleChoice
       :items="answers"
-      @on-select="seletectedValue = $event"
+      @on-select="$emit('on-select', $event)"
     />
   </div>
 </template>
@@ -32,7 +32,7 @@ export default defineComponent({
     }
   },
 
-  emits: ['next-step'],
+  emits: ['on-select'],
 
   setup() {
     const title = ref(StepData.title)
