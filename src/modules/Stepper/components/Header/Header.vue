@@ -22,13 +22,16 @@ import Logo from '@/assets/logo.svg'
 
 export default defineComponent({
   name: "Header",
+
   props: {
     isTransparent: {
       type: Boolean,
       default: false
     },
   },
+
   emits: ["go-back"],
+  
   setup() {
     return {
       LogoCactus,
@@ -44,6 +47,10 @@ export default defineComponent({
 
   padding: 20px;
   border-bottom: 1px solid $cactus;
+
+  @media only screen and (min-width: 720px) {
+    display: none;
+  }
 }
 
 .isTransparent {

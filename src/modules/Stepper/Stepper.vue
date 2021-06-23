@@ -1,22 +1,28 @@
 <template>
-  <section :class="$style.container">
-    <Header
-      :is-transparent="currentStep.isTransparent"
-      @go-back="goBack()"
-    />
-    <transition name="fade-in">
-      <components 
-        :is="currentStep.component"
-        :class="$style.steps" 
-        :progression="progression"
-        @next-step="onNextStep()"
-        @on-select="selectedValue = $event"
+  <section :class="[$style.container, {[$style.hasSide]:currentStep.sideImage}]">
+    <div :class="$style.inner">
+      <Header
+        :is-transparent="currentStep.isTransparent"
+        @go-back="goBack()"
       />
-    </transition>
-    <SubmitButton
-      v-if="currentStep.hasNavigation"
-      :progression="progression"
-      @submit-button="selectedValue ? onNextStep() : null"
+      <transition name="fade-in">
+        <components 
+          :is="currentStep.component"
+          :class="$style.steps" 
+          :progression="progression"
+          @next-step="onNextStep()"
+          @on-select="selectedValue = $event"
+        />
+      </transition>
+      <SubmitButton
+        v-if="currentStep.hasNavigation"
+        :progression="progression"
+        @submit-button="selectedValue ? onNextStep() : null"
+      />
+    </div>
+    <Sidebar
+      v-if="currentStep.sideImage"
+      :image="currentStep.sideImage"
     />
   </section>
 </template>
@@ -26,13 +32,14 @@ import { computed, defineComponent, ref, } from "vue";
 import StepsList from './stepsList'
 import StepDefinitions from './stepsDefinitions'
 import SubmitButton from "./components/SubmitButton/SubmitButton.vue";
+import Sidebar from "./components/Sidebar/Sidebar.vue";
 import Header from "./components/Header/Header.vue";
 import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "Stepper",
 
-  components: { SubmitButton, Header },
+  components: { SubmitButton, Header, Sidebar },
 
   setup() {
     const router = useRouter()
@@ -73,19 +80,35 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
+  height: 100%;
+
+  background-color: $cream;
+
+  @media only screen and (min-width: 720px) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   height: 100%;
   overflow-y: hidden;
-
-  background-color: $cream;
 }
 
 .steps {
   overflow-y: auto;
 }
 
+.hasSide {
+  .steps {
+    max-width: 630px;
+  }
+}
 </style>
 <style>
 .fade-in-enter-active {

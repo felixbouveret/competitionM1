@@ -1,6 +1,9 @@
 <template>
   <div :class="$style.container">
-    <Progression :progression="progression" />
+    <Progression
+      :class="$style.progress"
+      :progression="progression"
+    />
     <Button
       :class="$style.button"
       :is-active="isActive"
@@ -52,6 +55,20 @@ export default defineComponent({
   padding: 24px;
 
   background-color: $cream;
+
+  @media only screen and (min-width: 720px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 29px;
+  }
+}
+
+.progress {
+  @media only screen and (min-width: 720px) {
+    align-self: flex-end;
+    width: 100%;
+    max-width: 407px;
+  }
 }
 
 .button {
@@ -61,5 +78,10 @@ export default defineComponent({
   text-transform: none;
 
   @include typo-body;
+
+  @media only screen and (min-width: 720px) {
+    align-self: flex-start;
+    width: auto;
+  }
 }
 </style>
