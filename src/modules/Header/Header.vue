@@ -44,28 +44,30 @@ import Logo from '@/assets/logo-cactus.svg'
 import Wrapper from "../../components/Wrapper";
 
 export default defineComponent({
-    name: "SideNavModule",
-    components: { Wrapper },
-    setup() {
-        const subMenuActive = ref(false);
-        const toggleSubMenuActive = () => {
-            subMenuActive.value = !subMenuActive.value;
-        };
-        const headerActive = ref(false);
-        const toggleHeader = () => {
-            headerActive.value = !headerActive.value;
-        };
-        return {
-            toggleSubMenuActive,
-            toggleHeader,
-            subMenuActive,
-            headerActive,
-            items,
-            socials,
-            BurgerIcon,
-            Logo
-        };
-    },
+  name: "HeaderModule",
+
+  components: { Wrapper },
+
+  setup() {
+    const subMenuActive = ref(false);
+    const toggleSubMenuActive = () => {
+      subMenuActive.value = !subMenuActive.value;
+    };
+    const headerActive = ref(false);
+    const toggleHeader = () => {
+      headerActive.value = !headerActive.value;
+    };
+    return {
+      toggleSubMenuActive,
+      toggleHeader,
+      subMenuActive,
+      headerActive,
+      items,
+      socials,
+      BurgerIcon,
+      Logo
+    };
+  },
 });
 </script>
 
@@ -124,7 +126,7 @@ export default defineComponent({
     display: none;
     flex-shrink: 0;
 
-    @include typo-body;
+    @include typo-headline;
     color: $cactus;
     text-transform: uppercase;
     text-decoration: none;

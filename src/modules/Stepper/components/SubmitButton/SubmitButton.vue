@@ -53,6 +53,7 @@ export default defineComponent({
 <style lang="scss" module>
 .container {
   padding: 24px;
+  border-top: solid 1px $cactus;
 
   background-color: $cream;
 
@@ -60,6 +61,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column-reverse;
     gap: 29px;
+    border-top: 0;
   }
 }
 

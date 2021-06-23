@@ -75,7 +75,7 @@ export default defineComponent({
   background-color: $cream;
 
   @media only screen and (min-width: 720px) {
-    padding: 170px 24px 120px;
+    padding: 290px 24px 270px;
   }
 }
 

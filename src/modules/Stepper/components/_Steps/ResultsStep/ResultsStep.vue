@@ -5,6 +5,8 @@
     </h2>
 
     <Carousel
+      :mouse-drag="false"
+      :touche-drag="false"
       :class="$style.carousel"
       :items-to-show="1.2"
       :model-value="count"
@@ -54,7 +56,7 @@
     </Carousel>
     <div :class="$style.buttons">
       <button @click="decrement">
-        Precedent
+        Précédent
       </button>
       <button @click="increment">
         Suivant

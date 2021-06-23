@@ -71,7 +71,9 @@ export default defineComponent({
   top: 100px;
   left: 50%;
 
-  width: 76px;
+  width: calc(100% - 24px);
+
+  max-width: 218px;
 
   transform: translateX(-50%);
 }

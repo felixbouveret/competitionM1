@@ -136,7 +136,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
 
-  max-width: 290px;
+  max-width: 220px;
   margin: 24px auto 0;
 
   @media only screen and (min-width: 720px) {
@@ -153,9 +153,11 @@ export default defineComponent({
 
 .copyright {
   @include typo-footer;
+
   margin-top: 24px;
 
   color: $cactus;
+  font-size: 12px;
   text-align: center;
 
   @media only screen and (min-width: 720px) {

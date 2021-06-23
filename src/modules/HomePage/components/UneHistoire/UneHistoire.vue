@@ -60,7 +60,7 @@ export default defineComponent({
   @media only screen and (min-width: 720px) {
     display: flex;
     align-items: center;
-    padding: 120px 24px;
+    padding: 120px 24px 270px;
   }
 
   @media only screen and (min-width: 1200px) {

@@ -51,7 +51,7 @@ export default defineComponent({
   min-width: 100vw;
   max-height: 496px;
   margin-top: 147px;
-  margin-bottom: 54px;
+  margin-bottom: 140px;
 }
 
 .sectiongreen {
@@ -65,7 +65,7 @@ export default defineComponent({
 }
 
 .container {
-  padding: 240px 20px 20px 20px;
+  padding: 270px 20px 20px 20px;
 }
 
 .wrappercustomsection {
