@@ -70,7 +70,7 @@ export default defineComponent({
 }
 
 .steps {
-  flex-grow: 1;
+  overflow-y: auto;
 }
 
 </style>

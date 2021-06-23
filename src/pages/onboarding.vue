@@ -1,5 +1,7 @@
 <template>
-  <Stepper />
+  <div :class="$style.onboarding">
+    <Stepper />
+  </div>
 </template>
 
 <script lang="ts">
@@ -13,3 +15,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" module>
+.onboarding {
+  height: 100vh;
+}
+</style>

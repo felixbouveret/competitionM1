@@ -51,5 +51,8 @@ export default {
       current: 6,
       max: 6
     }
+  },
+  EmailStep: {
+    component: defineAsyncComponent(() => import('./components/_Steps/EmailStep')),
   }
 }

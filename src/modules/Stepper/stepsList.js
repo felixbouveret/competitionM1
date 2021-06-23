@@ -5,5 +5,6 @@ export default [
   'TuEsQuiStep',
   'MatineeStep',
   'DestinationStep',
-  'SavoirStep'
+  'SavoirStep',
+  'EmailStep'
 ]

@@ -2,13 +2,21 @@
   <a 
     v-if="href"
     :href="href"
-    :class="[$style.button, {[$style.isLight]: isLight}]"
+    :class="[
+      $style.button, 
+      {[$style.isLight]: isLight},
+      {[$style.isWired]: isWired},
+    ]"
   >
     <slot />
   </a>
   <button
     v-else
-    :class="[$style.button, {[$style.isLight]: isLight}]"
+    :class="[
+      $style.button, 
+      {[$style.isLight]: isLight},
+      {[$style.isWired]: isWired}
+    ]"
     @click="()=>$emit('on-click')"
   >
     <slot />
@@ -27,6 +35,10 @@ export default defineComponent({
       default: ''
     },
     isLight: {
+      type: Boolean,
+      default: false
+    },
+    isWired: {
       type: Boolean,
       default: false
     }
@@ -54,5 +66,17 @@ export default defineComponent({
     color: $black;
 
     background-color: $white;
+  }
+
+  .isWired {
+
+    padding: 14px 35px 14px 35px;
+    border: solid 1px $black;
+
+    color: $black;
+
+    background-color: transparent;
+
+    @include typo-body;
   }
 </style>

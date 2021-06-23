@@ -49,7 +49,7 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
-  padding: 24px 24px 146px 24px;
+  padding: 24px;
 
   background-color: $cream;
 }

@@ -11,7 +11,7 @@
           Votre chef à portée de clic
         </h2>
         <p :class="$style.text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown .
+          Choisissez le plat qui vous plait le plus, et recevez votre chef et les courses directement chez vous : il ne reste plus qu'à déguster !
         </p>
       </div>
       <ChiefNav
