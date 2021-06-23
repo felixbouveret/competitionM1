@@ -1,5 +1,5 @@
-import Decoupe from './assets/decoupe.png'
-import Champignon from "./assets/champignon.png"
+import Decoupe from './assets/decoupe.webp'
+import Champignon from "./assets/champignon.webp"
 
 export const quiconcesSection1 = {
   title: 'Economisez 1 heure de votre temps tous les jours',

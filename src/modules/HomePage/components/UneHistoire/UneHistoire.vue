@@ -33,7 +33,7 @@
 import {defineComponent} from 'vue'
 import Divider  from '@/components/Divider/Divider.vue'
 import Button  from '@/components/Button/Button.vue';
-import Persil from "../../assets/persilromain.png"
+import Persil from "../../assets/persilromain.webp"
 
 export default defineComponent({
   name: 'UneHistoire',

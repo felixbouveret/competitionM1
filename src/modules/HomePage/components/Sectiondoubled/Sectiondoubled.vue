@@ -30,7 +30,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Button from "@/components/Button/Button.vue";
-import Champignon from "../../assets/champignon.png"
+import Champignon from "../../assets/champignon.webp"
 
 export default defineComponent({
   name: "Sectiondoubled",

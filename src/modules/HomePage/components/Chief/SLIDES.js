@@ -1,6 +1,6 @@
-import chop from './assets/chop.png'
-import cleanclean from './assets/chop.png'
-import chopchop from './assets/chopchop.png'
+import chop from './assets/chop.webp'
+import cleanclean from './assets/chop.webp'
+import chopchop from './assets/chopchop.webp'
 import vegetables from './assets/vegetables.png'
 
 export default [

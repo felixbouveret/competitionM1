@@ -49,7 +49,7 @@ export default defineComponent({
 
   padding: 94px 24px 50px;
 
-  background-image: linear-gradient(0deg, rgba(29, 29, 29, 0.3), rgba(29, 29, 29, 0.3)), url('./assets/background.png');
+  background-image: linear-gradient(0deg, rgba(29, 29, 29, 0.3), rgba(29, 29, 29, 0.3)), url('./assets/background.webp');
   background-position: center;
   background-size: cover;
 
