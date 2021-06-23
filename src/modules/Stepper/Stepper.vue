@@ -11,7 +11,6 @@
     </transition>
     <SubmitButton
       v-if="currentStep.hasNavigation"
-      :class="$style.nav"
       :progression="progression"
       @submit-button="onNextStep()"
     />
@@ -64,7 +63,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
+  height: 100%;
   overflow-y: hidden;
 
   background-color: $cream;
