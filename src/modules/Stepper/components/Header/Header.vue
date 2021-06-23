@@ -1,10 +1,13 @@
 <template>
   <div :class="[$style.container,{[$style.isTransparent]:isTransparent}]">
-    <Wrapper>
+    <Wrapper :class="$style.inner">
       <button
+        :class="$style.button"
         @click="$emit('go-back')"
       >
-        Back
+        <img
+          :src="isTransparent ? BackArrowWhite : BackArrow"
+        >
       </button>
       <img
         :class="$style.logo"
@@ -19,6 +22,8 @@
 import { defineComponent } from "vue";
 import LogoCactus from '@/assets/logo-cactus.svg'
 import Logo from '@/assets/logo.svg'
+import BackArrow from '@/assets/icons/back-arrow.svg'
+import BackArrowWhite from '@/assets/icons/back-arrow-white.svg'
 
 export default defineComponent({
   name: "Header",
@@ -35,7 +40,9 @@ export default defineComponent({
   setup() {
     return {
       LogoCactus,
-      Logo
+      Logo,
+      BackArrow,
+      BackArrowWhite
     };
   },
 });
@@ -60,6 +67,11 @@ export default defineComponent({
   }
 }
 
+.inner {
+  display: flex;
+  align-items: center;
+}
+
 .isTransparent {
 
   border-bottom-color: $white;
@@ -75,5 +87,17 @@ export default defineComponent({
   width: 76px;
 
   transform: translateX(-50%);
+}
+
+.button {
+  padding: 0;
+  border: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  img {
+    display: block;
+  }
 }
 </style>
