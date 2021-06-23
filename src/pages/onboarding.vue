@@ -19,5 +19,7 @@ export default defineComponent({
 <style lang="scss" module>
 .onboarding {
   height: 100vh;
+
+  background-color: $cream;
 }
 </style>

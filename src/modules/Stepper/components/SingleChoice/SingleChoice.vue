@@ -47,7 +47,7 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
-  margin-top: 54px;
+  margin: 54px 0;
 
   @media only screen and (min-width: 720px) {
     margin-left: 40px;

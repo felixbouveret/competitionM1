@@ -1,5 +1,12 @@
 <template>
-  <section :class="[$style.container, {[$style.hasSide]:currentStep.sideImage}]">
+  <section
+    :class="[
+      $style.container,
+      {[$style.hasSide]:currentStep.sideImage},
+      {[$style.hasNavigation]:currentStep.hasNavigation},
+      {[$style.isTransparent]:currentStep.isTransparent},
+    ]"
+  >
     <div :class="$style.inner">
       <Header
         :is-transparent="currentStep.isTransparent"
@@ -81,14 +88,13 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
-  height: 100%;
-
   background-color: $cream;
 
   @media only screen and (min-width: 720px) {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -103,19 +109,29 @@ export default defineComponent({
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
-  overflow-y: hidden;
+  padding-top: 60px;
 }
 
 .stepsContainer {
   height: 100%;
-  overflow-y: auto;
 }
 
 .hasSide {
   .stepsContainer {
     max-width: 630px;
   }
+}
+
+.hasNavigation .inner {
+  padding-bottom: 160px;
+
+  @media only screen and (min-width: 720px) {
+    padding-bottom: 0;
+  }
+}
+
+.isTransparent .inner {
+  padding-top: 0;
 }
 
 </style>

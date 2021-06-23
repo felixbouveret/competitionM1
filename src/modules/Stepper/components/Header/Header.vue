@@ -43,10 +43,17 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  width: 100%;
 
   padding: 20px;
   border-bottom: 1px solid $cactus;
+
+  background-color: $cream;
 
   @media only screen and (min-width: 720px) {
     display: none;
@@ -54,12 +61,7 @@ export default defineComponent({
 }
 
 .isTransparent {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
 
-  width: 100%;
   border-bottom-color: $white;
 
   background-color: rgba($color: $white, $alpha: 0.5);

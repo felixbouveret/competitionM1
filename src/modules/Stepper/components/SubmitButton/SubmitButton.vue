@@ -52,12 +52,19 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   padding: 24px;
   border-top: solid 1px $cactus;
 
   background-color: $cream;
 
   @media only screen and (min-width: 720px) {
+    position: initial;
+
     display: flex;
     flex-direction: column-reverse;
     gap: 29px;
