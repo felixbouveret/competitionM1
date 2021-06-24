@@ -130,10 +130,14 @@ export default defineComponent({
     height: 100%;
     border-left: 2px solid rgba($color: $white, $alpha: 0.2);
 
-    background-color: rgba($color: $white, $alpha: 0.1);
-    backdrop-filter: blur(8px);
+    background-color: $white;
 
     content: "";
+
+    @media only screen and (min-width: 720px) {
+      background-color: rgba($color: $white, $alpha: 0.1);
+      backdrop-filter: blur(8px);
+    }
   }
 
   &::after {
@@ -187,10 +191,10 @@ export default defineComponent({
   height: 100%;
   border-left: 2px solid rgba($color: $white, $alpha: 0.2);
 
-  background-color: rgba($color: $white, $alpha: 0.1);
+  background-color: $white;
+
   transform: translateX(8px);
   opacity: 0;
-  backdrop-filter: blur(8px);
 
   transition-timing-function: ease-in-out;
 
@@ -202,6 +206,11 @@ export default defineComponent({
   @media only screen and (min-width: 540px) {
     left: calc(-100% - 2px);
     z-index: 0;
+  }
+
+  @media only screen and (min-width: 720px) {
+    background-color: rgba($color: $white, $alpha: 0.1);
+    backdrop-filter: blur(8px);
   }
 }
 
@@ -233,7 +242,7 @@ export default defineComponent({
   display: block;
   padding: 0 40px;
 
-  color: $white;
+  color: $black;
   text-decoration: none;
 
   span {
@@ -250,12 +259,20 @@ export default defineComponent({
       width: 0;
       height: 1px;
 
-      background-color: $white;
+      background-color: $black;
 
       transition: width 0.3s;
 
       content: '';
+
+      @media only screen and (min-width: 720px) {
+        background-color: $white;
+      }
     }
+  }
+
+  @media only screen and (min-width: 720px) {
+    color: $white;
   }
 }
 
