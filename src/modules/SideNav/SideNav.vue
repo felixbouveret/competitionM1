@@ -118,7 +118,7 @@ export default defineComponent({
   align-items: center;
   height: 100%;
 
-  transition: right 0.3s;
+  transition: right 0.5s ease-in-out;
 
   &::before {
     position: absolute;
@@ -148,7 +148,7 @@ export default defineComponent({
     background-color: $white;
     transform: translate(-50%, -50%);
 
-    transition: width 0.3s, opacity 0.3s;
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
     content: '';
   }
@@ -192,7 +192,9 @@ export default defineComponent({
   opacity: 0;
   backdrop-filter: blur(8px);
 
-  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  transition-duration: 0.5s;
   transition-property: opacity, transform;
 
   pointer-events: none;
