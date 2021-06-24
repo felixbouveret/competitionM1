@@ -128,6 +128,7 @@ export default defineComponent({
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  padding-top: 60px;
 }
 
 .stepsContainer {
@@ -141,7 +142,6 @@ export default defineComponent({
 }
 
 .hasNavigation .inner {
-  padding-top: 60px;
   padding-bottom: 160px;
 
   @media only screen and (min-width: 720px) {

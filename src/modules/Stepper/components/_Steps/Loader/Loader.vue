@@ -39,6 +39,11 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   height: 100%;
+  margin-top: 80px;
+
+  @media only screen and (min-width: 720px) {
+    margin-top: 0;
+  }
 }
 
 .spinner {
