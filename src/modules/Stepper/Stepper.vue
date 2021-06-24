@@ -25,7 +25,8 @@
       <SubmitButton
         v-if="currentStep.hasNavigation"
         :progression="progression"
-        @submit-button="selectedValue ? onNextStep() : null"
+        :has-error="hasError"
+        @submit-button="onSubmit()"
       />
     </div>
     <Sidebar
@@ -60,6 +61,7 @@ export default defineComponent({
       selectedValue.value = null
       currentStepIndex.value++;
       window.scrollTo(0, 0);
+      toggleError.value = false
     };
     const goBack = () => {
       if (!currentStepIndex.value) {
@@ -68,12 +70,24 @@ export default defineComponent({
       selectedValue.value = null
       currentStepIndex.value--;
       window.scrollTo(0, 0);
+      toggleError.value = false
     };
 
     const progression = computed(() => {
       if(currentStep.value.hasNavigation) return currentStep.value.progression
       return null
     });
+
+    const hasError = computed(() => !selectedValue.value && toggleError.value)
+    const toggleError = ref(false)
+
+    const onSubmit = () => {
+      if(selectedValue.value) {
+        onNextStep()
+      } else {
+        toggleError.value = true
+      }
+    }
 
     return {
       goBack,
@@ -82,7 +96,9 @@ export default defineComponent({
       currentStepIndex,
       activeStepName,
       progression,
-      selectedValue
+      selectedValue,
+      hasError,
+      onSubmit
     };
   },
 });

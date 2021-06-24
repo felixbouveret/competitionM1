@@ -1,5 +1,13 @@
 <template>
   <div :class="$style.container">
+    <transition name="fade-in">
+      <p
+        v-show="hasError"
+        :class="$style.error"
+      >
+        Une réponse est requise pour continuer
+      </p>
+    </transition>
     <Progression
       :class="$style.progress"
       :progression="progression"
@@ -39,6 +47,10 @@ export default defineComponent({
     isActive: {
       type: Boolean,
       default: false
+    },
+    hasError: {
+      type: Boolean,
+      default: true
     }
   },
 
@@ -63,7 +75,7 @@ export default defineComponent({
   background-color: $cream;
 
   @media only screen and (min-width: 720px) {
-    position: initial;
+    position: relative;
 
     display: flex;
     flex-direction: column-reverse;
@@ -95,6 +107,17 @@ export default defineComponent({
   @media only screen and (min-width: 720px) {
     align-self: flex-start;
     width: auto;
+  }
+}
+
+.error {
+  @include typo-body;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+
+  @media only screen and (min-width: 720px) {
+    left: 64px;
   }
 }
 </style>
