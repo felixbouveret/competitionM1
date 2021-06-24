@@ -13,7 +13,7 @@
 
 ## Projet : 
 
-- https://competitionM1.clpo.net/
+- https://competition.clpo.net/
 
 
 # Vue 3 + Typescript + Vite
