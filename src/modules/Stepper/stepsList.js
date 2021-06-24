@@ -7,5 +7,6 @@ export default [
   'DestinationStep',
   'SavoirStep',
   'EmailStep',
+  'Loader',
   'ResultsStep',
 ]

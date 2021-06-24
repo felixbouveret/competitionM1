@@ -59,6 +59,7 @@ export default defineComponent({
     const onNextStep = () => {
       selectedValue.value = null
       currentStepIndex.value++;
+      window.scrollTo(0, 0);
     };
     const goBack = () => {
       if (!currentStepIndex.value) {
@@ -66,6 +67,7 @@ export default defineComponent({
       }
       selectedValue.value = null
       currentStepIndex.value--;
+      window.scrollTo(0, 0);
     };
 
     const progression = computed(() => {
@@ -109,7 +111,6 @@ export default defineComponent({
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding-top: 60px;
 }
 
 .stepsContainer {
@@ -123,6 +124,7 @@ export default defineComponent({
 }
 
 .hasNavigation .inner {
+  padding-top: 60px;
   padding-bottom: 160px;
 
   @media only screen and (min-width: 720px) {

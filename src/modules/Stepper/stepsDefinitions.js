@@ -68,5 +68,8 @@ export default {
   },
   ResultsStep: {
     component: defineAsyncComponent(() => import('./components/_Steps/ResultsStep')),
+  },
+  Loader: {
+    component: defineAsyncComponent(() => import('./components/_Steps/Loader')),
   }
 }
