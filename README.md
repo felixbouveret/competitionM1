@@ -1,3 +1,21 @@
+# Compétition M1 - Persil et Romarin 
+
+## Serveur : 
+- Microsoft Azure
+- Ubuntu LTS 
+- Apache 
+- Webmin
+
+## Techno : 
+- Vue JS 3 
+- Vite JS 
+- TypeScript 
+
+## Projet : 
+
+- https://competitionM1.clpo.net/
+
+
 # Vue 3 + Typescript + Vite
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
